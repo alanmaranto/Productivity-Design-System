@@ -1,4 +1,4 @@
-import Button from "../../atomic/atoms/Button";
+import Button from "../../atoms/Button";
 
 export default {
   title: "Atoms/Button",
