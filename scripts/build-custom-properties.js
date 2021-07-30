@@ -1,11 +1,54 @@
 const fs = require("fs");
 const { choices, decisions } = require("../token");
 
-function camelCaseToDash(str) {
+function transformToken(parentKey, object) {
+  const objectKeys = Object.keys(object);
+
+  return objectKeys.reduce((tokensTransformed, objectKey) => {
+    const value = object[objectKey];
+    if (typeof value === "object") {
+      const customProperty = parentKey
+        ? `${parentKey}-${objectKey}`
+        : `${objectKey}`;
+      return `
+        ${tokensTransformed}
+        ${transformToken(camelCaseToKebabCase(customProperty), value)}
+      ;`;
+    }
+
+    return `${tokensTransformed}
+    --${parentKey}-${camelCaseToKebabCase(objectKey)}: ${value};`;
+  }, "");
+}
+
+function camelCaseToKebabCase(str) {
   return str.replace(/([a-zA-Z])(?=[A-Z])/g, "$1-").toLowerCase();
 }
 
-function buildCustomProperties() {
+function buildCustomPropertiesRecursive() {
+  const choicesString = transformToken(null, choices);
+  const decisionsString = transformToken(null, decisions);
+
+  const customProperties = `${choicesString}${decisionsString}`;
+
+  const data = `:root {
+    ${customProperties}
+  }`;
+
+  fs.writeFile(
+    "./tokens.css",
+    data,
+    // data.replace(/\t/g, "").replace(/\n{2,}/g, "\n\t"),
+    "utf8",
+    function (err) {
+      if (err) {
+        return console.error(err);
+      }
+    }
+  );
+}
+
+/* function buildCustomProperties() {
   let choicesString = "";
 
   if (typeof choices["colors"] === "object") {
@@ -18,7 +61,7 @@ function buildCustomProperties() {
         const colorString = brandKeys.reduce(
           (prevBrandKeys, currentBrandKeys) => {
             const value = choices["colors"][current][currentBrandKeys];
-            return `${prevBrandKeys}--colors-${current}-${camelCaseToDash(
+            return `${prevBrandKeys}--colors-${current}-${camelCaseToKebabCase(
               currentBrandKeys
             )}: ${value};`;
           },
@@ -50,6 +93,7 @@ function buildCustomProperties() {
       }
     }
   );
-}
+} */
 
-buildCustomProperties();
+// buildCustomProperties();
+buildCustomPropertiesRecursive();
