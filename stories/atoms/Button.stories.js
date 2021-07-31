@@ -9,13 +9,19 @@ const Template = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
+export const Tertiary = Template.bind({});
 
 Primary.args = {
-  children: "Primary",
+  children: "Button Primary",
   type: "primary",
 };
 
 Secondary.args = {
-  children: "Secondary",
+  children: "Button Secondary",
   type: "secondary",
+};
+
+Tertiary.args = {
+  children: "Button Tertiary",
+  type: "tertiary",
 };
