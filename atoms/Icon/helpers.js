@@ -5,4 +5,3 @@ const iconMap = {
 };
 
 export const mapIcon = (type) => `${ICONS_ASSETS_PATH}/${iconMap[type]}.svg`;
-

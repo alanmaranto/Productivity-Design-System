@@ -18,7 +18,7 @@ const Button = ({ children, type, isBlock }) => (
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   type: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
-  isBlock: PropTypes.bool
+  isBlock: PropTypes.bool,
 };
 
 Button.defaultProps = {

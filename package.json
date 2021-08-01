@@ -9,7 +9,8 @@
     "build-custom-properties": "node ./scripts/build-custom-properties",
     "build-storybook": "build-storybook",
     "prepare": "husky install",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +23,7 @@
     "@storybook/react": "^6.3.5",
     "babel-loader": "^8.2.2",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "husky": "^7.0.1",
