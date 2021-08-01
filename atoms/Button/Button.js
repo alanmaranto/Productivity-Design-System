@@ -13,7 +13,7 @@ const Button = ({ children, type, isBlock }) => (
   >
     {children}
   </button>
-);
+)
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
