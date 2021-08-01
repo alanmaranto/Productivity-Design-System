@@ -1,11 +1,20 @@
 .button {
   border: 1px solid var(--colors-transparent);
-  padding: 10px 85px;
+  padding: 10px 20px;
   border-radius: 30px;
   box-shadow: 0px 4px 5px var(--colors-brand-white-lilac);
   cursor: pointer;
   transition: all 0.5s ease;
   font-size: var(--font-size-2xl);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  white-space: nowrap; /* Bloquear palabras en dos lineas en botones */
+}
+
+.is-block {
+  width: 100%;
 }
 
 .type-primary {

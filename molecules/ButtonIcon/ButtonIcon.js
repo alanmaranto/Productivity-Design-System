@@ -4,8 +4,8 @@ import Button from "../../atoms/Button";
 import Icon from "../../atoms/Icon";
 
 const ButtonIcon = ({ children, type, icon }) => (
-  <Button type={type}>
-    {children}
+  <Button type={type} isBlock={false}>
+    <span style={{ marginRight: 10 }}>{children}</span>
     <Icon type={icon} />
   </Button>
 );
