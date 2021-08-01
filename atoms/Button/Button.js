@@ -13,7 +13,9 @@ const Button = ({ children, type, isBlock }) => (
   >
     {children}
   </button>
-)
+);
+
+console.log('hola')
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
