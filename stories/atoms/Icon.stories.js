@@ -11,5 +11,5 @@ const Template = (args) => <Icon {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  type: "right-arrow",
+  type: "rightArrow",
 };
