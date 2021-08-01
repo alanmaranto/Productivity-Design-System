@@ -1,3 +1,4 @@
+import React from 'react';
 import ButtonIcon from "../../molecules/ButtonIcon";
 
 export default {
