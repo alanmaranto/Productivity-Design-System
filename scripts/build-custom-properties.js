@@ -36,7 +36,7 @@ function buildCustomPropertiesRecursive() {
   }`;
 
   fs.writeFile(
-    "./tokens.css",
+    "./styles/tokens.css",
     data,
     // data.replace(/\t/g, "").replace(/\n{2,}/g, "\n\t"),
     "utf8",
