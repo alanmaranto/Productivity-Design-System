@@ -10,7 +10,7 @@ const Template = (args) => <ButtonIcon {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-  children: "Button Secondary",
+  children: "Button Icon",
   type: "secondary",
   icon: "rightArrow",
 };
