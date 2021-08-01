@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import getIconsList from "./iconList";
+import { mapIcon } from "./helpers";
 
 const Icon = ({ type }) => (
   <div>
-    <img src={getIconsList(type)} />
+    <img src={mapIcon(type)} />
   </div>
 );
 
