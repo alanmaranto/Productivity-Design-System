@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "commonjs": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
@@ -12,6 +13,11 @@
     "sourceType": "module"
   },
   "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     "no-console": ["error", { "allow": ["error"] }],
     "import/prefer-default-export": 0,

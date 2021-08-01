@@ -8,7 +8,8 @@
     "storybook": "start-storybook -p 6006 -s ./assets",
     "build-custom-properties": "node ./scripts/build-custom-properties",
     "build-storybook": "build-storybook",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
