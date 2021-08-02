@@ -19,7 +19,7 @@
 }
 
 .type-primary {
-  background: var(--colors-brand-medium-purple);
+  background: var(--colors-primary);
   color: var(--colors-white);
 }
 
@@ -33,8 +33,8 @@
 
 .type-secondary {
   background: var(--colors-transparent);
-  color: var(--colors-brand-medium-purple);
-  border: 1px solid var(--colors-brand-medium-purple);
+  color: var(--colors-primary);
+  border: 1px solid var(--colors-primary);
 }
 
 .type-tertiary {
