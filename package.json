@@ -8,9 +8,7 @@
     "build-custom-properties": "node ./scripts/build-custom-properties",
     "build-storybook": "build-storybook",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix",
-    "lint-staged": "eslint --cache --fix",
-    "prepare": "husky install"
+    "lint-fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +24,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
-    "husky": "^7.0.1",
+    "husky": "^4.2.5",
     "lint-staged": "^11.1.1",
     "prettier": "^2.3.2"
   },
@@ -35,7 +33,15 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }

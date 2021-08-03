@@ -8,7 +8,7 @@ const Button = ({ children, type, isBlock }) => (
   <button
     className={classNames("button", {
       [`type-${type}`]: type,
-      "is-block": isBlock && type !== "tertiary",
+      'is-block': isBlock && type !== "tertiary",
     })}
   >
     {children}
