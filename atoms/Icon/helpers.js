@@ -5,4 +5,12 @@ const iconMap = {
   angleDown: "angle-down",
 };
 
-export const mapIcon = (type) => `${ICONS_ASSETS_PATH}/${iconMap[type]}.svg`;
+const iconSize = {
+  sm: 15,
+  md: 20,
+  lg: 30,
+  xl: 40,
+};
+
+export const mapType = (type) => `${ICONS_ASSETS_PATH}/${iconMap[type]}.svg`;
+export const mapSize = (size) => iconSize[size];

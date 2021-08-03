@@ -1,0 +1,13 @@
+.icon {
+  display: inline-flex;
+  padding: 5px;
+  box-sizing: content-box;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.has-background {
+  background: var(--colors-primary-highlight);
+  border-radius: var(--border-radius-full);
+}

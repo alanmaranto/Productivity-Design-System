@@ -218,6 +218,9 @@
   --z-index-40: 40;
   --z-index-50: 50;
   --z-index-auto: auto;
+
+
+  /* Decisions */
   --colors-primary: #9879e9;
   --colors-primary-highlight: #eff1fd;
   --colors-secondary: #eb4e58;

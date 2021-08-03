@@ -10,6 +10,7 @@ const Template = (args) => <Icon {...args} />;
 
 export const ArrowRight = Template.bind({});
 export const AngleDown = Template.bind({});
+export const HasBackground = Template.bind({});
 
 ArrowRight.args = {
   type: "arrowRight",
@@ -17,4 +18,9 @@ ArrowRight.args = {
 
 AngleDown.args = {
   type: "angleDown",
+};
+
+HasBackground.args = {
+  type: "angleDown",
+  hasBackground: true,
 };
