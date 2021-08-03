@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006 -s ./assets",
     "build-custom-properties": "node ./scripts/build-custom-properties",
     "build-storybook": "build-storybook",
-    "prepare": "husky install",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix"
   },
@@ -34,11 +32,6 @@
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
