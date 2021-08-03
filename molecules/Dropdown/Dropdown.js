@@ -4,7 +4,7 @@ import Icon from "../../atoms/Icon";
 
 import "./Dropdown.css";
 
-const Dropdown = () => {
+const Dropdown = ({ value }) => {
   return (
     <div className="dropdown">
       <Icon type="angleDown" hasBackground />

@@ -8,7 +8,9 @@
     "build-custom-properties": "node ./scripts/build-custom-properties",
     "build-storybook": "build-storybook",
     "lint": "eslint .",
-    "lint-fix": "eslint . --fix"
+    "lint-fix": "eslint . --fix",
+    "lint-staged": "eslint --cache --fix",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
