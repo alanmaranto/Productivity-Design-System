@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { mapIcon } from "./helpers";
 
 const Icon = ({ type }) => (
-  <div>
+  <div className="icon">
     <img src={mapIcon(type)} />
   </div>
 );

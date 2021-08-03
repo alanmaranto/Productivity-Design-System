@@ -8,8 +8,13 @@ export default {
 
 const Template = (args) => <Icon {...args} />;
 
-export const Default = Template.bind({});
+export const ArrowRight = Template.bind({});
+export const AngleDown = Template.bind({});
 
-Default.args = {
-  type: "rightArrow",
+ArrowRight.args = {
+  type: "arrowRight",
+};
+
+AngleDown.args = {
+  type: "angleDown",
 };

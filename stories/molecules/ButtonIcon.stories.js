@@ -13,5 +13,5 @@ export const Default = Template.bind({});
 Default.args = {
   children: "Button Icon",
   type: "secondary",
-  icon: "rightArrow",
+  icon: "arrowRight",
 };
