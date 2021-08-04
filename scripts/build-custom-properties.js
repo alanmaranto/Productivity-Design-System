@@ -6,13 +6,24 @@ function transformToken(parentKey, object) {
 
   return objectKeys.reduce((tokensTransformed, objectKey) => {
     const value = object[objectKey];
-    if (typeof value === "object") {
+
+    if (Array.isArray(value)) {
+      const customProperty = parentKey
+        ? `${parentKey}-${objectKey}`
+        : objectKey;
+
+      return `${tokensTransformed}\n\t--${camelCaseToKebabCase(
+        customProperty
+      )}: ${value.join(", ")};`;
+    } else if (typeof value === "object") {
       const customProperty = parentKey
         ? `${parentKey}-${objectKey}`
         : `${objectKey}`;
       return `
-        ${tokensTransformed}
-        ${transformToken(camelCaseToKebabCase(customProperty), value)}
+        ${tokensTransformed}\n\t${transformToken(
+        camelCaseToKebabCase(customProperty),
+        value
+      )}
       ;`;
     }
 
