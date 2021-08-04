@@ -23,11 +23,11 @@ Input.defaultProps = {
 };
 
 Input.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  className: PropTypes.string,
   type: PropTypes.oneOf(["text"]),
   value: PropTypes.string,
   placeholder: PropTypes.string,
-  onChange: PropTypes.func.isRequired,
-  className: PropTypes.string,
 };
 
 export default Input;

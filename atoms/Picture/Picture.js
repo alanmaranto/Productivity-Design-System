@@ -11,8 +11,8 @@ const Picture = ({ width, src }) => (
 );
 
 Picture.propTypes = {
-  width: PropTypes.string.isRequired,
-  src: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  src: PropTypes.string.isRequired,
 };
 
 export default Picture;

@@ -24,7 +24,7 @@ Icon.defaultProps = {
 
 Icon.propTypes = {
   type: PropTypes.string.isRequired,
-  size: PropTypes.oneOfType(["sm", "md", "lg", "xl"]),
+  size: PropTypes.oneOf(["sm", "md", "lg", "xl"]),
   hasBackground: PropTypes.bool,
 };
 

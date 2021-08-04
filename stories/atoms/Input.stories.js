@@ -13,4 +13,5 @@ export const Text = Template.bind({});
 Text.args = {
   type: "text",
   placeholder: "Names",
+  onChange: () => {},
 };
