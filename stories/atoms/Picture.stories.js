@@ -12,5 +12,5 @@ export const Default = Template.bind({});
 
 Default.args = {
   src: "https://placeimg.com/400/400/any",
-  width: "640",
+  width: 200,
 };
