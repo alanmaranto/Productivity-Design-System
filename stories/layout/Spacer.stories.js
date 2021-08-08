@@ -12,7 +12,7 @@ export const ExtraSmall = () => <Spacer size="xs" isVisible />;
 export const Small = () => <Spacer size="sm" isVisible />;
 export const Medium = () => <Spacer size="md" isVisible />;
 export const Large = () => <Spacer size="lg" isVisible />;
-export const Horizontal = () => <Spacer.Horizontal size={12} isVisible />;
+export const Horizontal = () => <Spacer.Horizontal size="lg" isVisible />;
 export const Vertical = () => (
-  <Spacer.Vertical size={12} isVisible maxHeight={200} />
+  <Spacer.Vertical size="lg" isVisible maxHeight={200} />
 );
