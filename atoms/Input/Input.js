@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "./Input.css";
+import styles from "./Input.module.css";
 
 const Input = ({ type, value, onChange, placeholder, className }) => {
   return (
@@ -10,8 +10,8 @@ const Input = ({ type, value, onChange, placeholder, className }) => {
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className={className}
-    ></input>
+      className={styles.input || className}
+    />
   );
 };
 

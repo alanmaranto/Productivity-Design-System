@@ -1,14 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../../atoms/Icon";
+import classNames from "classnames";
 
-import "./Dropdown.css";
+import styles from "./Dropdown.module.css";
 
-const Dropdown = ({ options, onChange, value }) => {
+const Dropdown = ({ options, onChange, value, className }) => {
   return (
-    <div className="dropdown">
-      <Icon type="angleDown" hasBackground />
-      <select className="dropdown-select" onChange={onChange} value={value}>
+    <div className={classNames(className, styles.dropdown)}>
+      <Icon
+        type="angleDown"
+        hasBackground
+        className={styles["dropdown-icon"]}
+      />
+      <select
+        className={styles["dropdown-select"]}
+        onChange={onChange}
+        value={value}
+      >
         {options.map(({ text, value }) => (
           <option key={value} value={value}>
             {text}
@@ -33,6 +42,7 @@ Dropdown.propTypes = {
     })
   ).isRequired,
   value: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Dropdown;

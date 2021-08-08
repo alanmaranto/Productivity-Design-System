@@ -5,15 +5,15 @@ import classNames from "classnames";
 import Horizontal from "./Horizontal";
 import Vertical from "./Vertical";
 
-import "./Spacer.css";
+import styles from "./Spacer.module.css";
 
 const getSize = (size) => choices.spacing[size];
 
 const Spacer = ({ size, isVisible }) => {
   return (
     <div
-      className={classNames("spacer", {
-        "is-visible": isVisible,
+      className={classNames(styles.spacer, {
+        [styles["is-visible"]]: isVisible,
       })}
       style={{
         width: getSize(size),
