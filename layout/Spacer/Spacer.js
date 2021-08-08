@@ -23,7 +23,7 @@ const Spacer = ({ size, isVisible }) => {
 };
 
 Spacer.propTypes = {
-  size: PropTypes.number.isRequired,
+  size: PropTypes.string.isRequired,
   isVisible: PropTypes.bool,
 };
 

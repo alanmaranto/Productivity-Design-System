@@ -26,7 +26,7 @@ Vertical.defaultProps = {
 };
 
 Vertical.propTypes = {
-  size: PropTypes.number.isRequired,
+  size: PropTypes.string.isRequired,
   isVisible: PropTypes.bool,
   maxHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
