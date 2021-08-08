@@ -1,13 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { choices } from "../../token";
 import classNames from "classnames";
 import Horizontal from "./Horizontal";
 import Vertical from "./Vertical";
+import { getSize } from "./helpers";
 
 import styles from "./Spacer.module.css";
-
-const getSize = (size) => choices.spacing[size];
 
 const Spacer = ({ size, isVisible }) => {
   return (
