@@ -1,22 +1,21 @@
+const brandColors = {
+  mediumPurple: "#9879e9",
+  mandy: "#eb4e58",
+  whiteLilac: "#e8e8e8",
+  hintOfRed: "#f9f9f9",
+  romance: "#fcfdfd",
+  eastBay: "#455970",
+  regentGray: "#7e858c",
+  loblolly: "#b7b7b7",
+  blueMoon: "#eff1fd",
+};
+
 const choices = {
-  colors: {
-    brand: {
-      mediumPurple: "#9879e9",
-      mandy: "#eb4e58",
-      whiteLilac: "#e8e8e8",
-      hintOfRed: "#f9f9f9",
-      romance: "#fcfdfd",
-      eastBay: "#455970",
-      regentGray: "#7e858c",
-      loblolly: "#b7b7b7",
-      blueMoon: "#eff1fd",
-    },
+  color: {
+    brand: brandColors,
     transparent: "transparent",
-
     black: "#000",
-
     white: "#fff",
-
     gray: {
       100: "#f7fafc",
       200: "#edf2f7",
@@ -136,18 +135,19 @@ const choices = {
     md: 20,
     lg: 40,
   },
-  screens: {
-    xs: "420px",
-    sm: "640px",
-    md: "768px",
-    lg: "1024px",
-    xl: "1280px",
-    max: {
-      xs: "419px",
-      sm: "639px",
-      md: "767px",
-      lg: "1023px",
-      xl: "1279px",
+  // https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints
+  mediaQuery: {
+    minWidth: {
+      sm: "576px",
+      md: "768px",
+      lg: "992px",
+      xl: "1200px",
+    },
+    maxWidth: {
+      xs: "575.98px",
+      sm: "767.98px",
+      md: "991.98px",
+      lg: "1199px",
     },
   },
   fontFamily: {
@@ -157,16 +157,12 @@ const choices = {
   },
   fontSize: {
     base: "10px",
-    xs: ".75rem",
-    sm: ".875rem",
-    md: "1rem",
-    lg: "1.125rem",
-    xl: "1.25rem",
-    "2xl": "1.5rem",
-    "3xl": "1.875rem",
-    "4xl": "2.25rem",
-    "5xl": "3rem",
-    "6xl": "4rem",
+    xs: "1.1rem",
+    sm: "1.3rem",
+    md: "1.5rem",
+    lg: "1.8rem",
+    xl: "2.1rem",
+    "2xl": "6rem",
   },
   fontWeight: {
     hairline: 100,
@@ -195,36 +191,6 @@ const choices = {
     wider: ".05em",
     widest: ".1em",
   },
-  // prettier-ignore
-  shadows: {
-      outline: "0 0 0 3px rgba(66, 153, 225, 0.5)",
-      none: 'none',
-      down: {
-        sm: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-        md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-        lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-        xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-        "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-        inner: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)"
-      },
-      up: {
-        sm: "0 -1px 3px 0 rgba(0, 0, 0, 0.1), 0 -1px 2px 0 rgba(0, 0, 0, 0.06)",
-        md: "0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)",
-        lg: "0 -10px 15px -3px rgba(0, 0, 0, 0.1), 0 -4px 6px -2px rgba(0, 0, 0, 0.05)",
-        xl: "0 -20px 25px -5px rgba(0, 0, 0, 0.1), 0 -10px 10px -5px rgba(0, 0, 0, 0.04)",
-        "2xl": "0 -25px 50px -12px rgba(0, 0, 0, 0.25)",
-        inner: "inset 0 -2px 4px 0 rgba(0, 0, 0, 0.06)",
-      }
-    },
-  minHeight: {
-    0: "0",
-    full: "100%",
-    screen: "100vh",
-  },
-  minWidth: {
-    0: "0",
-    full: "100%",
-  },
   opacity: {
     0: "0",
     25: "0.25",
@@ -232,12 +198,20 @@ const choices = {
     75: "0.75",
     100: "1",
   },
+  boxShadow: {
+    none: "none",
+    sm: `0px 4px 5px ${brandColors.whiteLilac}`,
+  },
   borderRadius: {
     none: "0",
     sm: "0.125rem",
     md: "0.25rem",
     lg: "30px",
     full: "9999px",
+  },
+  borderWidth: {
+    none: "0",
+    default: "1px",
   },
   zIndex: {
     auto: "auto",
@@ -251,17 +225,26 @@ const choices = {
 };
 
 const decisions = {
-  colors: {
-    primary: choices.colors.brand.mediumPurple,
-    primaryHighlight: choices.colors.brand.blueMoon,
-    secondary: choices.colors.brand.mandy,
-    fontBase: choices.colors.brand.eastBay,
-    fontMuted: choices.colors.brand.regentGray,
-    fontHighlight: choices.colors.brand.loblolly,
+  color: {
+    primary: choices.color.brand.mediumPurple,
+    primaryHighlight: choices.color.brand.blueMoon,
+    secondary: choices.color.brand.mandy,
+    fontBase: choices.color.brand.eastBay,
+    fontMuted: choices.color.brand.regentGray,
+    fontHighlight: choices.color.brand.loblolly,
   },
-  backgrounds: {
-    primary: choices.colors.brand.hintOfRed,
-    highlight: choices.colors.brand.romance,
+  backgroundColor: {
+    primary: choices.color.brand.hintOfRed,
+    highlight: choices.color.brand.romance,
+  },
+  container: {
+    maxWidth: "800px",
+  },
+  button: {
+    maxWidth: "300px",
+  },
+  input: {
+    height: "38px",
   },
 };
 

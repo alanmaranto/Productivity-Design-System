@@ -1,17 +1,20 @@
 .button {
-  border: 1px solid var(--colors-transparent);
+  border: var(--border-width-default) solid var(--color-transparent);
   padding: 10px 20px;
   border-radius: var(--border-radius-lg);
-  box-shadow: 0px 4px 5px var(--colors-brand-white-lilac);
+  box-shadow: 0px 4px 5px var(--box-shadow-sm);
   cursor: pointer;
   transition: all 0.5s ease;
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-md);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  max-width: 300px;
+  max-width: var(--button-max-width);
   /* white-space: nowrap; */ /* Bloquear palabras en dos lineas en botones */
   min-width: max-content;
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-sans);
+  height: 45px;
 }
 
 .is-block {
@@ -19,8 +22,8 @@
 }
 
 .type-primary {
-  background: var(--colors-primary);
-  color: var(--colors-white);
+  background: var(--color-primary);
+  color: var(--color-white);
 }
 
 .button:hover {
@@ -32,17 +35,18 @@
 }
 
 .type-secondary {
-  background: var(--colors-transparent);
-  color: var(--colors-primary);
-  border: 1px solid var(--colors-primary);
+  background: var(--color-transparent);
+  color: var(--color-primary);
+  border: var(--border-width-default) solid var(--color-primary);
 }
 
 .type-tertiary {
-  /* --colors-transparent: blue; */
-  background: var(--colors-transparent);
-  color: var(--colors-primary);
+  /* --color-transparent: blue; */
+  background: var(--color-transparent);
+  color: var(--color-primary);
   box-shadow: var(--shadows-none);
-  padding: none;
-  border-bottom: 1px solid var(--colors-primary);
+  padding: 0;
+  border-bottom: var(--border-width-default) solid var(--color-primary);
   border-radius: var(--border-radius-none);
+  height: auto;
 }
