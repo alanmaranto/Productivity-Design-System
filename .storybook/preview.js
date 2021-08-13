@@ -1,3 +1,4 @@
+import 'minireset.css'
 import '../styles/main.css'
 import '../styles/tokens.css'
 
