@@ -408,15 +408,18 @@ exports[`Storyshots Molecules/ButtonIcon Default 1`] = `
 <button
   className="button type-secondary"
 >
-  <span
+  Button Icon
+  <div
+    className="spacer"
     style={
       Object {
-        "marginRight": 10,
+        "display": "block",
+        "height": "100vh",
+        "maxHeight": "100%",
+        "width": 5,
       }
     }
-  >
-    Button Icon
-  </span>
+  />
   <div
     className="icon"
     style={
@@ -495,12 +498,4 @@ exports[`Storyshots Molecules/Dropdown Default 1`] = `
     </option>
   </select>
 </div>
-`;
-
-exports[`initStoryshots should match the snapshot 1`] = `
-<button
-  className="button type-primary is-block"
->
-  Button
-</button>
 `;
