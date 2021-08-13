@@ -15,7 +15,8 @@
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "chromatic": "npx chromatic --project-token=bf957786a5c8"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +34,7 @@
     "babel-loader": "8.1.0",
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-plugin-transform-require-context": "0.1.1",
+    "chromatic": "5.9.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
@@ -49,9 +51,9 @@
     "require-context.macro": "1.2.2"
   },
   "peerDependencies": {
+    "classnames": "2.3.1",
     "minireset.css": "0.0.7",
-    "react": "16.13.1",
-    "classnames": "2.3.1"
+    "react": "16.13.1"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
