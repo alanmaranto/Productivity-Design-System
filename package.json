@@ -11,7 +11,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -s ./assets",
     "build-tokens": "node ./scripts/build-custom-properties",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s ./assets",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "prepare": "husky install",
@@ -32,8 +32,6 @@
     "@storybook/react": "^6.3.5",
     "babel-jest": "26.3.0",
     "babel-loader": "8.1.0",
-    "babel-plugin-require-context-hook": "1.0.0",
-    "babel-plugin-transform-require-context": "0.1.1",
     "chromatic": "5.9.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -47,8 +45,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-is": "16.13.1",
-    "react-test-renderer": "17.0.2",
-    "require-context.macro": "1.2.2"
+    "react-test-renderer": "17.0.2"
   },
   "peerDependencies": {
     "classnames": "2.3.1",
