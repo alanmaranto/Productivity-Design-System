@@ -416,7 +416,7 @@ exports[`Storyshots Molecules/ButtonIcon Default 1`] = `
         "display": "block",
         "height": "100vh",
         "maxHeight": "100%",
-        "width": 5,
+        "width": 15,
       }
     }
   />
