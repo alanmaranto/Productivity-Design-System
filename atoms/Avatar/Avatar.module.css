@@ -1,0 +1,5 @@
+.avatar {
+  border-radius: var(--border-radius-full);
+  border: 1px solid tomato;
+  display: inline-block;
+}
