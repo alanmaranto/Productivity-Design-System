@@ -13,7 +13,7 @@ const Vertical = ({ size, isVisible, maxHeight }) => {
       })}
       style={{
         width: getSize(size),
-        height: "100vh",
+        height: getSize(size),
         display: "block",
         maxHeight,
       }}
