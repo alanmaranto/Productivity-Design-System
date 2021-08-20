@@ -6,9 +6,7 @@ export default {
   component: Heading,
   decorators: [
     (Story) => (
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <Story />
-      </div>
+      <div style={{ display: "flex", flexDirection: "column" }}>{Story()}</div>
     ),
   ],
 };
