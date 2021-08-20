@@ -1,0 +1,34 @@
+.card {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--box-shadow-sm);
+  padding: 6px 12px;
+  color: var(--color-font-base);
+  display: flex;
+  align-items: center;
+}
+
+.size-sm {
+  height: 45px;
+}
+
+.size-md {
+  height: 80px;
+}
+
+.size-lg {
+  height: 115px;
+}
+
+.color-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.color-secondary {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+.color-default {
+  background: var(--color-white);
+}
