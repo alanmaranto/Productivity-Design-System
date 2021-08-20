@@ -204,8 +204,8 @@ const choices = {
   },
   borderRadius: {
     none: "0",
-    sm: "0.125rem",
-    md: "0.25rem",
+    sm: "10px",
+    md: "20px",
     lg: "30px",
     full: "9999px",
   },

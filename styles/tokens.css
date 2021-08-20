@@ -153,8 +153,8 @@
   --box-shadow-none: none;
   --box-shadow-sm: 0px 4px 5px #e8e8e8;
   --border-radius-none: 0;
-  --border-radius-sm: 0.125rem;
-  --border-radius-md: 0.25rem;
+  --border-radius-sm: 10px;
+  --border-radius-md: 20px;
   --border-radius-lg: 30px;
   --border-radius-full: 9999px;
   --border-width-none: 0;
