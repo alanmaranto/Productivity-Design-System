@@ -16,7 +16,8 @@
     "lint-fix": "eslint . --fix",
     "prepare": "husky install",
     "test": "jest",
-    "chromatic": "npx chromatic --project-token=bf957786a5c8"
+    "chromatic": "npx chromatic --project-token=bf957786a5c8",
+    "create-component": "node ./scripts/create-component"
   },
   "keywords": [],
   "author": "",
