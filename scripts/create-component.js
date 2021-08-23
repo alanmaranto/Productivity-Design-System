@@ -1,26 +1,11 @@
 /* eslint-disable no-console */
 const fs = require("fs").promises;
-const [, , type, componentName] = process.argv;
+const enquirer = require("enquirer");
 
 const ATOMIC_DESIGN_TYPES = {
   atom: "atoms",
   molecule: "molecules",
 };
-
-function checkParams(type, component) {
-  if (!type || !component) {
-    console.log("Error: Please make sure you pass a type an a component name");
-    process.exit(1);
-  }
-}
-function checkParamType(mappedType) {
-  if (!mappedType) {
-    console.log(
-      `Error: The param type "${type}" is not valid. Use "atom" or "molecule" instead`
-    );
-    process.exit(1);
-  }
-}
 
 function readComponentFile() {
   return fs.readFile("./templates/component/Component.js", "utf8");
@@ -50,9 +35,6 @@ async function createComponent(type, componentName) {
   const mappedType = ATOMIC_DESIGN_TYPES[type];
   const componentPath = `./${mappedType}/${componentName}`;
 
-  checkParams(type, componentName);
-  checkParamType(mappedType);
-
   try {
     const componentFile = await readComponentFile();
     const replacedComponentFile = await replaceComponentFile(
@@ -72,4 +54,47 @@ async function createComponent(type, componentName) {
     process.exit(1);
   }
 }
-createComponent(type, componentName);
+
+/**
+ * Function to validate Component Name and capitalize if it's necessary
+ * @param {str} str
+ */
+function stringCheckAndCapitalize(str) {
+  const REG_EXP = /[A-Z]/;
+
+  if (!REG_EXP.test(str)) {
+    return str
+      .replace(
+        /\w\S*/g,
+        (word) => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()
+      )
+      .replace(/ /g, "");
+  } else {
+    return str;
+  }
+}
+
+async function getPrompParams() {
+  let { type } = await enquirer.prompt({
+    type: "select",
+    name: "type",
+    message: "What kind of component would you like to create?",
+    choices: ["atom", "molecule"],
+    initial: "atom",
+  });
+
+  let { componentName } = await enquirer.prompt({
+    type: "input",
+    name: "componentName",
+    message: "What is the name of the new component?",
+    validate(input) {
+      if (!this.skipped && input.trim().length === 0 && input.trim() !== ",") {
+        return "Please, tell us what is the name of the new component. Try again!";
+      }
+      return true;
+    },
+  });
+  createComponent(type, stringCheckAndCapitalize(componentName));
+}
+
+getPrompParams();
