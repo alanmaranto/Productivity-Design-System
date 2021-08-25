@@ -1,6 +1,6 @@
 {
   "name": "@alanmaranto/components",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "private": false,
   "description": "A components library to create apps from zero to production",
   "main": "index.js",
@@ -17,7 +17,8 @@
     "prepare": "husky install",
     "test": "jest",
     "chromatic": "npx chromatic --project-token=bf957786a5c8",
-    "create-component": "node ./scripts/create-component"
+    "create-component": "node ./scripts/create-component",
+    "semantic-release": "semantic-release"
   },
   "keywords": [],
   "author": "",
@@ -47,7 +48,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-is": "16.13.1",
-    "react-test-renderer": "17.0.2"
+    "react-test-renderer": "17.0.2",
+    "semantic-release": "^17.4.7"
   },
   "peerDependencies": {
     "classnames": "2.3.1",
