@@ -8,6 +8,11 @@
     "type": "git",
     "url": "https://github.com/alanmaranto/Productivity-Design-System.git"
   },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  },
   "scripts": {
     "storybook": "start-storybook -p 6006 -s ./assets",
     "build-tokens": "node ./scripts/build-custom-properties",
