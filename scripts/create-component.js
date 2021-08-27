@@ -5,6 +5,7 @@ const enquirer = require("enquirer");
 const ATOMIC_DESIGN_TYPES = {
   atom: "atoms",
   molecule: "molecules",
+  layout: "layout",
 };
 
 function readComponentFile() {
@@ -79,7 +80,7 @@ async function getPrompParams() {
     type: "select",
     name: "type",
     message: "What kind of component would you like to create?",
-    choices: ["atom", "molecule"],
+    choices: ["atom", "molecule", "layout"],
     initial: "atom",
   });
 
