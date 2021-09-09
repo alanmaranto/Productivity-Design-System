@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { choices, decisions } = require("../token");
+const { camelCaseToKebabCase } = require("../utils/cases");
 
 function transformToken(parentKey, object) {
   const objectKeys = Object.keys(object);
@@ -30,10 +31,6 @@ function transformToken(parentKey, object) {
     return `${tokensTransformed}
     --${parentKey}-${camelCaseToKebabCase(objectKey)}: ${value};`;
   }, "");
-}
-
-function camelCaseToKebabCase(str) {
-  return str.replace(/([a-zA-Z])(?=[A-Z])/g, "$1-").toLowerCase();
 }
 
 function buildCustomPropertiesRecursive() {
