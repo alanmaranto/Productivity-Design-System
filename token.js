@@ -153,7 +153,7 @@ const choices = {
   fontFamily: {
     // serif: ["Roboto Slab", '"Times New Roman"', "serif"],
     sans: ["Quicksand", "Arial", "sans-serif"],
-    mono: ["Roboto Mono", "monospace"],
+    mono: ["Roboto Mono", "Courier New", "monospace"],
   },
   fontSize: {
     base: "10px",
