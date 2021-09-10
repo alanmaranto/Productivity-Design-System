@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { choices, decisions } = require("../token");
-const { camelCaseToKebabCase } = require("../utils/cases");
+const { toKebabCase } = require("../utils/cases");
 
 function transformToken(parentKey, object) {
   const objectKeys = Object.keys(object);
@@ -13,7 +13,7 @@ function transformToken(parentKey, object) {
         ? `${parentKey}-${objectKey}`
         : objectKey;
 
-      return `${tokensTransformed}\n\t--${camelCaseToKebabCase(
+      return `${tokensTransformed}\n\t--${toKebabCase(
         customProperty
       )}: ${value.join(", ")};`;
     } else if (typeof value === "object") {
@@ -22,14 +22,14 @@ function transformToken(parentKey, object) {
         : `${objectKey}`;
       return `
         ${tokensTransformed}\n\t${transformToken(
-        camelCaseToKebabCase(customProperty),
+        toKebabCase(customProperty),
         value
       )}
       ;`;
     }
 
     return `${tokensTransformed}
-    --${parentKey}-${camelCaseToKebabCase(objectKey)}: ${value};`;
+    --${parentKey}-${toKebabCase(objectKey)}: ${value};`;
   }, "");
 }
 

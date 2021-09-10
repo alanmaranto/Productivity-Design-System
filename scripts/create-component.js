@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 const fs = require("fs").promises;
 const enquirer = require("enquirer");
+const { toPascalCase } = require("../utils/cases");
 
 const ATOMIC_DESIGN_TYPES = {
   atom: "atoms",
@@ -56,25 +57,6 @@ async function createComponent(type, componentName) {
   }
 }
 
-/**
- * Function to validate Component Name and capitalize if it's necessary
- * @param {str} str
- */
-function stringCheckAndCapitalize(str) {
-  const REG_EXP = /[A-Z]/;
-
-  if (!REG_EXP.test(str)) {
-    return str
-      .replace(
-        /\w\S*/g,
-        (word) => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()
-      )
-      .replace(/ /g, "");
-  } else {
-    return str;
-  }
-}
-
 async function getPrompParams() {
   let { type } = await enquirer.prompt({
     type: "select",
@@ -95,7 +77,7 @@ async function getPrompParams() {
       return true;
     },
   });
-  createComponent(type, stringCheckAndCapitalize(componentName));
+  createComponent(type, toPascalCase(componentName));
 }
 
 getPrompParams();
