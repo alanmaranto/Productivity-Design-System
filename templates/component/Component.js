@@ -4,7 +4,7 @@ import classNames from "classnames";
 import styles from "./Component.module.css";
 
 const Component = ({ children }) => {
-  return <div className={classNames(styles.component)}>{children}</div>;
+  return <div className={classNames(styles["component"])}>{children}</div>;
 };
 
 Component.propTypes = {
