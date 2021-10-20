@@ -17,8 +17,10 @@
     "storybook": "start-storybook -p 6006 -s ./assets",
     "build-tokens": "node ./scripts/build-custom-properties",
     "build-storybook": "build-storybook -s ./assets",
-    "lint": "eslint .",
+    "lint": "npm run lint-js && npm run lint-css",
+    "lint-js": "eslint .",
     "lint-fix": "eslint . --fix",
+    "lint-css": "stylelint \"**/*.css\"",
     "prepare": "husky install",
     "test": "jest",
     "chromatic": "npx chromatic --project-token=bf957786a5c8",
@@ -54,7 +56,10 @@
     "react-dom": "16.13.1",
     "react-is": "16.13.1",
     "react-test-renderer": "17.0.2",
-    "semantic-release": "17.4.7"
+    "semantic-release": "17.4.7",
+    "stylelint": "13.13.1",
+    "stylelint-config-prettier": "9.0.3",
+    "stylelint-prettier": "1.2.0"
   },
   "peerDependencies": {
     "classnames": "2.3.1",

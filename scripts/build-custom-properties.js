@@ -2,29 +2,24 @@ const fs = require("fs");
 const { choices, decisions } = require("../token");
 const { toKebabCase } = require("../utils/cases");
 
+const cleanLines = (string = "") => string.trim().replace(/^\n\n/gm, "\n");
+
 function transformToken(parentKey, object) {
   const objectKeys = Object.keys(object);
 
   return objectKeys.reduce((tokensTransformed, objectKey) => {
     const value = object[objectKey];
+    const customProperty = parentKey
+      ? toKebabCase(`${parentKey}-${objectKey}`)
+      : toKebabCase(objectKey);
 
     if (Array.isArray(value)) {
-      const customProperty = parentKey
-        ? `${parentKey}-${objectKey}`
-        : objectKey;
-
-      return `${tokensTransformed}\n\t--${toKebabCase(
-        customProperty
-      )}: ${value.join(", ")};`;
+      return `${tokensTransformed}\n\t--${customProperty}: ${value.join(
+        ", "
+      )};`;
     } else if (typeof value === "object") {
-      const customProperty = parentKey
-        ? `${parentKey}-${objectKey}`
-        : `${objectKey}`;
       return `
-        ${tokensTransformed}\n\t${transformToken(
-        toKebabCase(customProperty),
-        value
-      )}
+        ${tokensTransformed}\n\t${transformToken(customProperty, value)}
       ;`;
     }
 
@@ -39,9 +34,8 @@ function buildCustomPropertiesRecursive() {
 
   const customProperties = `${choicesString}${decisionsString}`;
 
-  const data = `:root {
-    ${customProperties}
-  }`;
+  const data = `:root {\n
+    ${cleanLines(customProperties)}\n}\n`;
 
   fs.writeFile(
     "./styles/tokens.css",
