@@ -6,13 +6,6 @@ import { toKebabCase } from "../../utils/cases";
 export default {
   title: "Tokens/Colors",
   component: Token.Color,
-  decorators: [
-    (Story) => (
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <Story />
-      </div>
-    ),
-  ],
 };
 
 const Template = (args) => <Token.Color {...args} />;

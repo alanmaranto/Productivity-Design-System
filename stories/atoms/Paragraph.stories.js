@@ -4,11 +4,6 @@ import Paragraph from "../../atoms/Paragraph";
 export default {
   title: "Atoms/Paragraph",
   component: Paragraph,
-  decorators: [
-    (Story) => (
-      <div style={{ display: "flex", flexDirection: "column" }}>{Story()}</div>
-    ),
-  ],
 };
 
 const Template = (args) => <Paragraph {...args} />;

@@ -1,6 +1,7 @@
-import 'minireset.css'
-import '../styles/main.css'
-import '../styles/tokens.css'
+import React from "react";
+import "minireset.css";
+import "../styles/main.css";
+import "../styles/tokens.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -10,4 +11,12 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
+
+export const decorators = [
+  (Story) => (
+    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+      <Story />
+    </div>
+  ),
+];
