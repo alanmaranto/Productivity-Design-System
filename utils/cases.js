@@ -26,7 +26,10 @@ function toPascalCase(str) {
   }
 }
 
+const toCapitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+
 module.exports = {
   toKebabCase,
   toPascalCase,
+  toCapitalize,
 };

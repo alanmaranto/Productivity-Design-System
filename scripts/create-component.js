@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const fs = require("fs").promises;
 const enquirer = require("enquirer");
-const { toPascalCase, toKebabCase } = require("../utils/cases");
+const { toPascalCase, toKebabCase, toCapitalize } = require("../utils/cases");
 const path = require("path");
 
 const ATOMIC_DESIGN_TYPES = {
@@ -19,13 +19,21 @@ function readComponentFile(componentTemplate) {
   );
 }
 
-function replaceComponentFile(componentIsStory, componentFile, componentName) {
+function replaceComponentFile(
+  componentIsStory,
+  componentFile,
+  componentName,
+  mappedType
+) {
   if (!componentIsStory) {
     return componentFile
       .replace(/component/g, toKebabCase(componentName))
       .replace(/Component/g, componentName);
   } else {
-    return componentFile.replace(/Component/g, componentName);
+    return componentFile
+      .replace(/Component/g, componentName)
+      .replace(/atomic/g, mappedType)
+      .replace(/Atomic/g, toCapitalize(mappedType));
   }
 }
 
@@ -60,7 +68,8 @@ async function createComponent(componentTemplates, type, componentName) {
       const replacedComponentFile = await replaceComponentFile(
         componentIsStory,
         componentFile,
-        componentName
+        componentName,
+        mappedType
       );
       await createComponentFile(
         path.join(
