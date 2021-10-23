@@ -1,7 +1,7 @@
-/* // https://github.com/storybookjs/storybook/issues/6055#issuecomment-521046352
+// https://github.com/storybookjs/storybook/issues/6055#issuecomment-521046352
 // yarn dev:storybook --debug-webpack
 
-const cssModules = (config) => {
+const cssModules = () => async (config) => {
   // We search the rule defined for `*.css` files
   const cssRule = config.module.rules.find(
     (rule) => rule.test && rule.test.test(".css")
@@ -28,4 +28,3 @@ const cssModules = (config) => {
 };
 
 module.exports = cssModules;
- */
