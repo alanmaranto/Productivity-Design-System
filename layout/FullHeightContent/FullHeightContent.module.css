@@ -1,9 +1,9 @@
 .full-height-content {
   display: flex;
+  height: 100%;
   flex: auto;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
 }
 
 .content {

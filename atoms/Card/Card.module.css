@@ -1,13 +1,13 @@
 .card {
+  display: flex;
   width: 100%;
+  align-items: center;
+  padding: 12px 10px;
+  border: var(--border-width-thin) solid var(--color-base-transparent);
   /* max-width: 320px; */
   border-radius: var(--border-radius-sm);
   box-shadow: var(--box-shadow-sm);
-  padding: 12px 10px;
   color: var(--color-font-base);
-  display: flex;
-  align-items: center;
-  border: var(--border-width-thin) solid var(--color-base-transparent);
 }
 
 .size-sm {
