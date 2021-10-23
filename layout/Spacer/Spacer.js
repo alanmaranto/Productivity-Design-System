@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import Horizontal from "./Horizontal";
-import Vertical from "./Vertical";
-import { getSize } from "./helpers";
+import { Horizontal, Vertical } from "./components";
+import { mapSize } from "./helpers";
 
 import styles from "./Spacer.module.css";
 
@@ -14,8 +13,8 @@ const Spacer = ({ size, isVisible }) => {
         [styles["is-visible"]]: isVisible,
       })}
       style={{
-        width: getSize(size),
-        height: getSize(size),
+        width: mapSize(size),
+        height: mapSize(size),
         display: "inline-block",
       }}
     />
@@ -24,6 +23,7 @@ const Spacer = ({ size, isVisible }) => {
 
 Spacer.defaultProps = {
   size: "none",
+  isVisible: false,
 };
 
 Spacer.propTypes = {

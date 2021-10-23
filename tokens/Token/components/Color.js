@@ -1,16 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "../Token.module.css";
+import Helper from "../Helper";
 
 const Color = ({ label, value }) => {
   return (
-    <div className={styles.container}>
+    <Helper label={label} value={value}>
       <div className={styles.color} style={{ backgroundColor: value }}></div>
-      <div className={styles.description}>
-        <span className={styles.label}>{label}</span>
-        <span className={styles.label}>{value}</span>
-      </div>
-    </div>
+    </Helper>
   );
 };
 

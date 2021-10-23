@@ -1,6 +1,12 @@
 .centered-content {
   display: flex;
+  height: 100%;
   flex: auto;
   flex-direction: column;
+  align-items: stretch;
   justify-content: center;
+}
+
+.is-visible {
+  border: var(--border-width-thick) dashed var(--color-primary);
 }

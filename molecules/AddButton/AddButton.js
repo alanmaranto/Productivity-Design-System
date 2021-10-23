@@ -1,42 +1,84 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import Paragraph from "../../atoms/Paragraph";
 import Icon from "../../atoms/Icon";
 import Spacer from "../../layout/Spacer";
 import styles from "./AddButton.module.css";
-import { handleClick, handleOnChange, handleOnKeyDown } from "./handlers";
+import {
+  handleClick,
+  handleOnChange,
+  handleOnKeyDown,
+  handleBlur,
+  handleFocus,
+} from "./handlers";
+import { shouldShowHelpText } from "./helpers";
 
-const AddButton = ({ children, type, onAdd, isEditable }) => {
-  const [editMode, setEditMode] = useState(isEditable);
-  const [inputValue, setInputValue] = useState("");
+import { options } from "./constants";
+
+const AddButton = ({
+  children,
+  type,
+  onAdd,
+  icon,
+  focusHelpText,
+  blurHelpText,
+  defaultEditMode,
+  defaultValue,
+}) => {
+  const [editMode, setEditMode] = useState(defaultEditMode);
+  const [inputValue, setInputValue] = useState(defaultValue);
+  const [isFocused, setIsFocused] = useState(false);
+  const inputRef = useRef(null);
 
   return (
     <div
       className={classNames(styles["add-button"], {
         [styles[`type-${type}`]]: type,
         [styles["is-editable"]]: editMode,
+        [styles["is-focused"]]: isFocused,
       })}
-      onClick={handleClick({ setEditMode })}
+      onClick={handleClick({ setEditMode, isFocused, inputRef })}
     >
       {editMode ? (
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleOnChange({ setInputValue })}
-          onKeyDown={handleOnKeyDown({
+        <div className={styles["edit-container"]}>
+          <input
+            ref={inputRef}
+            type="text"
+            value={inputValue}
+            onChange={handleOnChange({ setInputValue })}
+            onKeyDown={handleOnKeyDown({
+              inputValue,
+              onAdd,
+              setInputValue,
+              setEditMode,
+            })}
+            onBlur={handleBlur({ inputValue, setEditMode, setIsFocused })}
+            onFocus={handleFocus({ setIsFocused })}
+            autoFocus={!defaultEditMode}
+          />
+          {shouldShowHelpText({
+            editMode,
             inputValue,
-            onAdd,
-            setInputValue,
-            setEditMode,
-          })}
-          autoFocus
-        />
+            focusHelpText,
+            blurHelpText,
+          }) && (
+            <>
+              <Paragraph
+                className="help-text"
+                color={isFocused ? "muted" : "inverted"}
+              >
+                {isFocused ? focusHelpText : blurHelpText}
+              </Paragraph>
+              <Spacer.Vertical size="sm" />
+            </>
+          )}
+        </div>
       ) : (
         <>
           <Icon
-            type="arrowRight"
-            size="sm"
+            name={icon}
+            color={type === "primary" ? "base" : "highlight"}
             hasBackground={type === "primary"}
           />
           <Spacer.Vertical size="sm" />
@@ -49,15 +91,21 @@ const AddButton = ({ children, type, onAdd, isEditable }) => {
 
 AddButton.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf(["primary", "secondary"]),
+  type: PropTypes.oneOf(options.types),
+  icon: PropTypes.oneOf(options.icons),
   onAdd: PropTypes.func.isRequired,
-  isEditable: PropTypes.bool,
+  focusHelpText: PropTypes.string,
+  blurHelpText: PropTypes.string,
+  defaultEditMode: PropTypes.bool,
+  defaultValue: PropTypes.string,
 };
 
 AddButton.defaultProps = {
   type: "primary",
-  isEditable: false,
+  icon: "plusCircle",
   onAdd: () => {},
+  defaultEditMode: false,
+  defaultValue: "",
 };
 
 export default AddButton;

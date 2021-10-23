@@ -5,17 +5,18 @@ import classNames from "classnames";
 
 import styles from "./Dropdown.module.css";
 
-const Dropdown = ({ options, onChange, value, className }) => {
+const Dropdown = ({ options, onChange, value, isInline, id }) => {
   return (
-    <div className={classNames(className, styles.dropdown)}>
-      <Icon
-        type="angleDown"
-        hasBackground
-        className={styles["dropdown-icon"]}
-      />
+    <div
+      id={id}
+      className={classNames(styles.dropdown, {
+        [styles["is-inline"]]: isInline,
+      })}
+    >
+      <Icon className="dropdown-icon" name="angleDown" background="highlight" />
       <select
         className={styles["dropdown-select"]}
-        onChange={onChange}
+        onChange={(event) => onChange(event?.currentTarget?.value)}
         value={value}
       >
         {options.map(({ text, value }) => (
@@ -36,13 +37,13 @@ Dropdown.propTypes = {
   onChange: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(
     PropTypes.shape({
-      text: PropTypes.string.isRequired,
-      value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-        .isRequired,
+      text: PropTypes.string,
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     })
   ).isRequired,
-  value: PropTypes.string,
-  className: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  id: PropTypes.string,
+  isInline: PropTypes.bool,
 };
 
 export default Dropdown;

@@ -4,6 +4,7 @@ import Picture from "../Picture";
 import classNames from "classnames";
 import { mapSize } from "./helpers";
 import styles from "./Avatar.module.css";
+import { options } from "./constants";
 
 const Avatar = ({ src, size }) => {
   return (
@@ -23,7 +24,7 @@ Avatar.defaultProps = {
 };
 
 Avatar.propTypes = {
-  size: PropTypes.oneOf(["sm", "md", "lg"]).isRequired,
+  size: PropTypes.oneOf(options.sizes).isRequired,
   src: PropTypes.string.isRequired,
 };
 

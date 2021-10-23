@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { choices, decisions } = require("../token");
+const { choices, decisions } = require("../tokens");
 const { toKebabCase } = require("../utils/cases");
 
 const cleanLines = (string = "") => string.trim().replace(/^\n\n/gm, "\n");
@@ -14,17 +14,16 @@ function transformToken(parentKey, object) {
       : toKebabCase(objectKey);
 
     if (Array.isArray(value)) {
-      return `${tokensTransformed}\n\t--${customProperty}: ${value.join(
+      return `${tokensTransformed}\n  --${customProperty}: ${value.join(
         ", "
       )};`;
     } else if (typeof value === "object") {
       return `
-        ${tokensTransformed}\n\t${transformToken(customProperty, value)}
+        ${tokensTransformed}\n${transformToken(customProperty, value)}
       ;`;
     }
-
-    return `${tokensTransformed}
-    --${parentKey}-${toKebabCase(objectKey)}: ${value};`;
+    const label = `--${parentKey}-${toKebabCase(objectKey)}`;
+    return `${tokensTransformed}\n  ${label}: ${value};`;
   }, "");
 }
 

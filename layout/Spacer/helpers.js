@@ -1,3 +1,4 @@
-import { choices } from "../../token";
+import { choices } from "../../tokens";
 
-export const getSize = (size) => choices.spacing[size];
+export const mapSize = (size) =>
+  typeof size === "number" ? size : choices.spacing[size];

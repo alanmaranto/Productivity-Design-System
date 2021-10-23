@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-
+import { options } from ".";
 import styles from "./Card.module.css";
 
 const Card = ({ color, size, children }) => {
@@ -18,13 +18,13 @@ const Card = ({ color, size, children }) => {
 };
 
 Card.defaultProps = {
-  color: "default",
+  color: "base",
   size: "sm",
 };
 
 Card.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "default"]),
-  size: PropTypes.string,
+  color: PropTypes.oneOf(options.colors),
+  size: PropTypes.oneOf(options.sizes),
   children: PropTypes.node.isRequired,
 };
 

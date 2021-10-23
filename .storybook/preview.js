@@ -3,19 +3,34 @@ import "minireset.css";
 import "../styles/main.css";
 import "../styles/tokens.css";
 
+const getStyles = (args) => ({
+  display: "flex",
+  flexDirection: args.__sb?.fd || "column",
+  maxHeight: args.__sb?.mh || "auto",
+  justifyContent: "flex-start",
+  alignItems: "flex-start",
+  flexWrap: "wrap",
+  height: "100%",
+  gap: "10px 30px",
+});
+
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
+  // actions: { argTypesRegex: "^on[A-Z].*" },
+  // controls: {
+  //   matchers: {
+  //     color: /(background|color)$/i,
+  //     date: /Date$/,
+  //   },
+  // },
+  argTypes: {
+    __sb: { table: { disable: true } },
+    actions: { argTypesRegex: "^on[A-Z].*" },
   },
 };
 
 export const decorators = [
-  (Story) => (
-    <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+  (Story, { args }) => (
+    <div style={getStyles(args)}>
       <Story />
     </div>
   ),

@@ -1,10 +1,12 @@
 import React from "react";
-import Color from "./components/Color";
 
-const Token = () => {
-  return <></>;
-};
+import { Color, Spacing, FontFamily, FontSize } from "./components";
+
+const Token = () => <></>;
 
 Token.Color = Color;
+Token.Spacing = Spacing;
+Token.FontFamily = FontFamily;
+Token.FontSize = FontSize;
 
 export default Token;
