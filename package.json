@@ -14,18 +14,21 @@
     ]
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006 -s ./assets",
-    "build-tokens": "node ./scripts/build-custom-properties",
-    "build-storybook": "build-storybook -s ./assets",
-    "lint": "npm run lint-js && npm run lint-css",
-    "lint-js": "eslint .",
-    "lint-fix": "eslint . --fix",
-    "lint-css": "stylelint \"**/*.css\"",
+    "build:storybook": "build-storybook",
+    "build:tokens": "node ./scripts/build-custom-properties",
+    "deploy:vercel": "vercel --prod",
+    "deploy": "run-s build:* deploy:*",
+    "dev:storybook": "start-storybook -p 6006",
+    "dev:tokens": "watch 'npm run build:tokens' ./tokens",
+    "dev": "concurrently 'npm:dev:*'",
+    "lint:css:prettier": "prettier '**/*.css' --write",
+    "lint:css:stylelint": "stylelint '**/*.css' --fix",
+    "lint:css": "npm run lint:css:stylelint && npm run lint:css:prettier",
+    "lint:js": "eslint --cache --fix",
+    "lint": "run-p lint:*",
     "prepare": "husky install",
     "test": "jest",
-    "chromatic": "npx chromatic --project-token=bf957786a5c8",
-    "create-component": "node ./scripts/create-component",
-    "semantic-release": "semantic-release"
+    "cc": "node ./scripts/create-component"
   },
   "keywords": [],
   "author": "",
@@ -42,6 +45,7 @@
     "babel-jest": "26.3.0",
     "babel-loader": "8.1.0",
     "chromatic": "5.9.2",
+    "concurrently": "6.3.0",
     "enquirer": "2.3.6",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -51,6 +55,7 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "26.4.2",
     "lint-staged": "^11.1.1",
+    "npm-run-all": "4.1.5",
     "prettier": "^2.3.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -58,8 +63,9 @@
     "react-test-renderer": "17.0.2",
     "semantic-release": "17.4.7",
     "stylelint": "13.13.1",
-    "stylelint-config-prettier": "9.0.3",
-    "stylelint-prettier": "1.2.0"
+    "stylelint-config-idiomatic-order": "8.1.0",
+    "stylelint-config-recommended": "3.0.0",
+    "watch": "1.0.2"
   },
   "peerDependencies": {
     "classnames": "2.3.1",
@@ -67,6 +73,7 @@
     "react": "16.13.1"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.js": "npm run lint:js",
+    "*.css": "npm run lint:css"
   }
 }

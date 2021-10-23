@@ -2,3 +2,5 @@ node_modules
 .eslintcache
 .vscode
 build-storybook.log
+.vercel
+!atoms/Icon

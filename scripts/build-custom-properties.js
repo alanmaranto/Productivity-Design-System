@@ -18,9 +18,7 @@ function transformToken(parentKey, object) {
         ", "
       )};`;
     } else if (typeof value === "object") {
-      return `
-        ${tokensTransformed}\n${transformToken(customProperty, value)}
-      ;`;
+      return `${tokensTransformed}\n${transformToken(customProperty, value)}`;
     }
     const label = `--${parentKey}-${toKebabCase(objectKey)}`;
     return `${tokensTransformed}\n  ${label}: ${value};`;
@@ -33,8 +31,7 @@ function buildCustomPropertiesRecursive() {
 
   const customProperties = `${choicesString}${decisionsString}`;
 
-  const data = `:root {\n
-    ${cleanLines(customProperties)}\n}\n`;
+  const data = `:root {\n  ${cleanLines(customProperties)}\n}\n`;
 
   fs.writeFile(
     "./styles/tokens.css",
