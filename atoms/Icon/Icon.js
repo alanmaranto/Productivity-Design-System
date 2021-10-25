@@ -18,6 +18,7 @@ const Icon = ({ id, onClick, name, size, color, background, className }) => {
         "is-clickeable": !!onClick,
       })}
       style={{ width: mappedSize, height: mappedSize }}
+      onClick={onClick}
     >
       <svg
         viewBox={icon.viewBox}
@@ -39,7 +40,7 @@ Icon.defaultProps = {
 
 Icon.propTypes = {
   size: PropTypes.oneOf(options.sizes),
-  background: PropTypes.bool,
+  background: PropTypes.oneOf(options.backgrounds),
   className: PropTypes.string,
   name: PropTypes.oneOf(options.names).isRequired,
   onClick: PropTypes.func,

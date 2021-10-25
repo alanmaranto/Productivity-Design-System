@@ -9,7 +9,7 @@ const Button = ({ children, type, isInline, onClick, isMuted }) => (
   <button
     className={classNames(styles.button, {
       [styles[`type-${type}`]]: type,
-      [styles["is-inline"]]: isInline && type !== "tertiary",
+      [styles["is-inline"]]: isInline && type === "tertiary",
       [styles["is-muted"]]: isMuted && type === "primary",
     })}
     onClick={onClick}

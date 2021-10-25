@@ -59,6 +59,6 @@
   box-shadow: var(--box-shadow-sm);
 }
 
-.is-clickable {
+.is-clickeable {
   cursor: pointer;
 }

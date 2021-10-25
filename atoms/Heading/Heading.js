@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { options } from ".";
+import { options } from "./constants";
 
 import styles from "./Heading.module.css";
 
