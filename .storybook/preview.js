@@ -15,17 +15,11 @@ const getStyles = (args) => ({
 });
 
 export const parameters = {
-  // actions: { argTypesRegex: "^on[A-Z].*" },
-  // controls: {
-  //   matchers: {
-  //     color: /(background|color)$/i,
-  //     date: /Date$/,
-  //   },
-  // },
   argTypes: {
     __sb: { table: { disable: true } },
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    styles: { table: { disable: true } },
   },
+  actions: { argTypesRegex: "^on[A-Z].*" },
 };
 
 export const decorators = [

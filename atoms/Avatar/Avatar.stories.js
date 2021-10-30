@@ -1,4 +1,4 @@
-import Avatar, { options } from ".";
+import { Avatar, styles, options } from ".";
 import {
   getOptionsArgTypes,
   getTemplate,
@@ -17,8 +17,8 @@ export default {
   },
 };
 
-const Template = getTemplate(Avatar);
-const ListTemplate = getListTemplate(Avatar);
+const Template = getTemplate(Avatar, styles);
+const ListTemplate = getListTemplate(Avatar, styles);
 
 export const Default = Template.bind({});
 
