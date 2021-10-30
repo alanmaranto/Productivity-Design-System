@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Picture from "../Picture";
-import classNames from "classnames";
 import { mapSize } from "./helpers";
 import styles from "./Avatar.module.css";
 import { options } from "./constants";
+import withStyles from "../../hoc/withStyles";
 
-const Avatar = ({ src, size }) => {
+const Avatar = ({ src, size, styles }) => {
   return (
-    <div className={classNames(styles.avatar)}>
+    <div className={styles("avatar")}>
       <Picture
         src={src}
         width={mapSize(size)}
@@ -26,6 +26,7 @@ Avatar.defaultProps = {
 Avatar.propTypes = {
   size: PropTypes.oneOf(options.sizes).isRequired,
   src: PropTypes.string.isRequired,
+  styles: PropTypes.func.isRequired,
 };
 
-export default Avatar;
+export default withStyles(styles)(Avatar);

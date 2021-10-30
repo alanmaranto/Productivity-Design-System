@@ -1,20 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { iconsMap, mapSize } from "./helpers";
-import { getClasses } from "../../helpers/styles";
 import { options } from "./constants";
+import withStyles from "../../hoc/withStyles";
 
 import styles from "./Icon.module.css";
 
-const Icon = ({ id, onClick, name, size, color, background, className }) => {
+const Icon = ({ id, onClick, name, size, className, styles }) => {
   const icon = iconsMap[name];
   const mappedSize = mapSize(size);
-  const classes = getClasses(styles)({ color, size, background });
 
   return (
     <div
       id={id}
-      className={classes(className, "icon", ["color", "size", "background"], {
+      className={styles(className, "icon", ["color", "size", "background"], {
         "is-clickeable": !!onClick,
       })}
       style={{ width: mappedSize, height: mappedSize }}
@@ -41,6 +40,7 @@ Icon.defaultProps = {
 Icon.propTypes = {
   size: PropTypes.oneOf(options.sizes),
   background: PropTypes.oneOf(options.backgrounds),
+  styles: PropTypes.func.isRequired,
   className: PropTypes.string,
   name: PropTypes.oneOf(options.names).isRequired,
   onClick: PropTypes.func,
@@ -48,4 +48,4 @@ Icon.propTypes = {
   id: PropTypes.string,
 };
 
-export default Icon;
+export default withStyles(styles)(Icon);
