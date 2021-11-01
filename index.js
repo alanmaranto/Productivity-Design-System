@@ -13,6 +13,7 @@ export { default as Picture } from "./atoms/Picture";
 export { default as Avatar } from "./atoms/Avatar";
 export { default as Card } from "./atoms/Card";
 export { default as Paragraph } from "./atoms/Paragraph";
+export { default as Check } from "./atoms/Check";
 
 // Molecules
 export { default as ButtonIcon } from "./molecules/ButtonIcon";

@@ -1,4 +1,4 @@
-import Icon, { options } from ".";
+import { Icon, styles, options } from ".";
 import {
   getOptionsArgTypes,
   getTemplate,
@@ -21,10 +21,13 @@ export default {
   },
 };
 
-const Template = getTemplate(Icon);
-const ListTemplate = getListTemplate(Icon);
+const Template = getTemplate(Icon, styles);
+const ListTemplate = getListTemplate(Icon, styles);
 
 export const Default = Template.bind({});
+
+export const Clickable = Template.bind({});
+Clickable.args = { isClickable: true };
 
 export const Names = ListTemplate.bind({});
 Names.args = {

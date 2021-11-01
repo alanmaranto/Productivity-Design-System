@@ -18,7 +18,7 @@ export const getObjectClasses = (stylesModule, arg) => {
 };
 
 export const getClasses =
-  (stylesModule) =>
+  (stylesModule = {}) =>
   (props) =>
   (...args) => {
     return classNames(

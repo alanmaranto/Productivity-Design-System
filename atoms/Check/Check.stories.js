@@ -1,15 +1,13 @@
-import Check from ".";
-import { getTemplate, getListTemplate } from "../../helpers/storybook";
+import { Check, styles } from ".";
+import { getTemplate } from "../../helpers/storybook";
 
-const Template = getTemplate(Check);
-const ListTemplate = getListTemplate(Check);
+const Template = getTemplate(Check, styles);
 
 export default {
   title: "Atoms/Check",
   component: Check,
-  args: {},
-  argTypes: {},
 };
 
 export const Default = () => Template.bind({});
-export const List = () => ListTemplate.bind({});
+export const Checked = Template.bind({});
+Checked.args = { checked: true };

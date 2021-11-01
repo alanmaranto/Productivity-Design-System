@@ -1,17 +1,15 @@
 import React from "react";
 import { getClasses } from "../helpers/styles";
 
-const getDisplayName = (WrappedComponent) => {
-  return WrappedComponent.displayName || WrappedComponent.name || "Component";
-};
-
-const withStyles = (styles) => (Component) => {
+const withStyles = (styles) => (WrappedComponent) => {
   const WithStylesComponent = (props) => {
-    const allProps = { ...Component.defaultProps, ...props };
-    return <Component styles={getClasses(styles)(allProps)} {...props} />;
+    const allProps = { ...WrappedComponent.defaultProps, ...props };
+    return (
+      <WrappedComponent styles={getClasses(styles)(allProps)} {...props} />
+    );
   };
-  WithStylesComponent.displayName = getDisplayName(Component);
-  WithStylesComponent.defaultProps = Component.defaultProps;
+
+  WithStylesComponent.displayName = WrappedComponent.displayName;
 
   return WithStylesComponent;
 };

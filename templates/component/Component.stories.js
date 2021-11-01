@@ -1,9 +1,23 @@
-import React from "react";
-import Component from "../../atomic/Component";
+import { Component, styles, options } from ".";
+
+import {
+  getTemplate,
+  getListTemplate,
+  getOptionsArgTypes,
+} from "../../helpers/storybook";
+
+const Template = getTemplate(Component, styles);
+const ListTemplate = getListTemplate(Component, styles);
 
 export default {
   title: "Atomic/Component",
   component: Component,
+  args: {},
+  argTypes: {
+    types: getOptionsArgTypes(options.types),
+  },
 };
 
-export const Default = () => <Component>Hello world</Component>;
+export const Default = Template.bind({});
+export const List = ListTemplate.bind({});
+List.args = { items: options.types.map((type) => ({ type })) };

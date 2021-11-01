@@ -1,16 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 import styles from "./Check.module.css";
+import withStyles from "../../hoc/withStyles";
+import Icon from "../Icon";
 
-const Check = ({ children }) => {
-  return <div className={classNames(styles["check"])}>{children}</div>;
+export const Check = ({ checked, styles }) => {
+  return checked ? (
+    <Icon name="checkCircle" color="muted" isClickable />
+  ) : (
+    <span className={styles("check")} />
+  );
 };
 
 Check.propTypes = {
-  children: PropTypes.node.isRequired,
+  styles: PropTypes.func.isRequired,
+  checked: PropTypes.bool,
 };
 
-Check.defaultProps = {};
+Check.defaultProps = {
+  styles: () => {},
+};
 
-export default Check;
+export default withStyles(styles)(Check);

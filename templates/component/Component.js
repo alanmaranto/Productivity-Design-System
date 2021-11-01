@@ -1,16 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 import styles from "./Component.module.css";
+import { options } from "./constants";
+import withStyles from "../../hoc/withStyles";
 
-const Component = ({ children }) => {
-  return <div className={classNames(styles["component"])}>{children}</div>;
+export const Component = ({ children, styles }) => {
+  return <div className={styles("component")}>{children}</div>;
 };
 
 Component.propTypes = {
   children: PropTypes.node.isRequired,
+  styles: PropTypes.func.isRequired,
+  type: PropTypes.oneOf(options.types),
 };
 
-Component.defaultProps = {};
+Component.defaultProps = {
+  styles: () => {},
+};
 
-export default Component;
+export default withStyles(styles)(Component);
