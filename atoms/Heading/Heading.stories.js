@@ -1,4 +1,4 @@
-import Heading, { options } from ".";
+import { Heading, styles, options } from ".";
 import {
   getOptionsArgTypes,
   getTemplate,
@@ -14,12 +14,13 @@ export default {
   argTypes: {
     color: getOptionsArgTypes(options.colors),
     size: getOptionsArgTypes(options.sizes),
+    weight: getOptionsArgTypes(options.weights),
     children: { control: "text" },
   },
 };
 
-const Template = getTemplate(Heading);
-const ListTemplate = getListTemplate(Heading);
+const Template = getTemplate(Heading, styles);
+const ListTemplate = getListTemplate(Heading, styles);
 
 export const Default = Template.bind({});
 
@@ -32,3 +33,6 @@ export const Sizes = ListTemplate.bind({});
 Sizes.args = {
   items: options.sizes.map((size) => ({ size })),
 };
+
+export const Weights = ListTemplate.bind({});
+Weights.args = { items: options.weights.map((weight) => ({ weight })) };

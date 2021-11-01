@@ -1,17 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 import styles from "./Paragraph.module.css";
 import { getClasses } from "../../helpers/styles";
 import { options } from "./constants";
 
-const Paragraph = ({ children, className, size, color, weight }) => {
+const Paragraph = ({ children, className, size, color, weight, isStriked }) => {
   const classes = getClasses(styles)({ color, size, weight });
   return (
     <div
-      className={classNames(
-        classes(className, "paragraph", ["color", "size", "weight"])
-      )}
+      className={classes(className, "paragraph", ["color", "size", "weight"], {
+        "is-striked": isStriked,
+      })}
     >
       {children}
     </div>
@@ -24,6 +23,7 @@ Paragraph.propTypes = {
   size: PropTypes.oneOf(options.sizes),
   weight: PropTypes.oneOf(options.weights),
   className: PropTypes.string,
+  isStriked: PropTypes.bool,
 };
 
 Paragraph.defaultProps = {
