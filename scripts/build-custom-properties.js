@@ -15,7 +15,8 @@ function transformToken(parentKey, object) {
 
     if (Array.isArray(value)) {
       return `${tokensTransformed}\n  --${customProperty}: ${value.join(
-        ", "
+        // eslint-disable-next-line prettier/prettier
+        ', '
       )};`;
     } else if (typeof value === "object") {
       return `${tokensTransformed}\n${transformToken(customProperty, value)}`;
