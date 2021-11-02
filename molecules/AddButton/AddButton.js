@@ -80,7 +80,7 @@ const AddButton = ({
           <Icon
             name={icon}
             color={type === "primary" ? "base" : "highlight"}
-            hasBackground={type === "primary"}
+            background={type === "primary" ? "highlight" : undefined}
           />
           <Spacer.Vertical size="sm" />
           <Paragraph>{children}</Paragraph>
