@@ -8,6 +8,6 @@ export default {
   component: Check,
 };
 
-export const Default = () => Template.bind({});
+export const Default = Template.bind({});
 export const Checked = Template.bind({});
 Checked.args = { checked: true };
