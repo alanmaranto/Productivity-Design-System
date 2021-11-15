@@ -27,7 +27,7 @@ Spacer.defaultProps = {
 };
 
 Spacer.propTypes = {
-  size: PropTypes.string.isRequired,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   isVisible: PropTypes.bool,
 };
 

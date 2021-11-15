@@ -31,6 +31,7 @@ const Dropdown = ({ options, onChange, value, isInline, id }) => {
 
 Dropdown.defaultProps = {
   value: "",
+  onChange: () => {},
 };
 
 Dropdown.propTypes = {

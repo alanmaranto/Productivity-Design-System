@@ -15,7 +15,7 @@ export const Heading = ({ children, styles }) => {
 Heading.propTypes = {
   children: PropTypes.string.isRequired,
   color: PropTypes.oneOf(options.colors),
-  size: PropTypes.oneOf(options.size),
+  size: PropTypes.oneOf(options.sizes),
   styles: PropTypes.func.isRequired,
   weight: PropTypes.oneOf(options.weights),
 };
@@ -24,6 +24,7 @@ Heading.defaultProps = {
   color: "base",
   size: "md",
   weight: "bold",
+  children: "",
 };
 
 export default withStyles(styles)(Heading);

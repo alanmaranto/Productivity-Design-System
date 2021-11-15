@@ -24,6 +24,7 @@ Input.defaultProps = {
   value: "",
   placeholder: "",
   isInline: false,
+  onChange: () => {},
 };
 
 Input.propTypes = {
