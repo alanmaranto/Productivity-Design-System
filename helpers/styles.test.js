@@ -14,6 +14,11 @@ const cssModuleMock = {
 
 const propsMock = { size: "sm", color: "red" };
 
+jest.mock("classnames", () => ({
+  __esModule: true,
+  default: (value) => value,
+}));
+
 describe("helpers styles", () => {
   describe("#getDynamicClasses", () => {
     describe("when all `props` match the `classes` array", () => {
@@ -120,11 +125,32 @@ describe("helpers styles", () => {
         expect(result).toStrictEqual(expected);
       });
     });
-    // describe("when `arg`is a string", () => {
-    //   it("should call `getModuleClasses`", () => {});
-    // });
-    // describe("when `arg`is an object", () => {
-    //   it("should call `getObjectClasses`", () => {});
-    // });
+    describe("when `arg`is a string and `cssModule` contains the `classKey`", () => {
+      it("should return the classnames", () => {
+        const args = "size-sm";
+        const result = getClasses(cssModuleMock)(propsMock)(args);
+        const expected = [".xyz_size_sm"];
+
+        expect(result).toStrictEqual(expected);
+      });
+    });
+    describe("when `arg`is a string and `cssModule` doesn't contain the `classKey`", () => {
+      it("should call the classnames", () => {
+        const args = "width-full";
+        const result = getClasses(cssModuleMock)(propsMock)(args);
+        const expected = ["width-full"];
+
+        expect(result).toStrictEqual(expected);
+      });
+    });
+    describe("when `arg` is am object", () => {
+      it("should return the classnames", () => {
+        const args = { "is-editable": true, "is-block": true };
+        const result = getClasses(cssModuleMock)(propsMock)(args);
+        const expected = [{ ".xyz_is_editable": true }];
+
+        expect(result).toStrictEqual(expected);
+      });
+    });
   });
 });
