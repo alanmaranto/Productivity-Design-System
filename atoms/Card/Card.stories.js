@@ -1,4 +1,4 @@
-import Card, { options } from ".";
+import Card, { options, styles } from ".";
 import {
   getOptionsArgTypes,
   getTemplate,
@@ -17,8 +17,8 @@ export default {
   },
 };
 
-const Template = getTemplate(Card);
-const ListTemplate = getListTemplate(Card);
+const Template = getTemplate(Card, styles);
+const ListTemplate = getListTemplate(Card, styles);
 
 export const Default = Template.bind({});
 

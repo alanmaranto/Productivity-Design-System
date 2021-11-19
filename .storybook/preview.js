@@ -3,10 +3,10 @@ import "minireset.css";
 import "../styles/main.css";
 import "../styles/tokens.css";
 
-const getStyles = (args) => ({
+const getStyles = ({__sb} = {}) => ({
   display: "flex",
-  flexDirection: args.__sb?.fd || "column",
-  maxHeight: args.__sb?.mh || "auto",
+  flexDirection: __sb?.fd || "column",
+  maxHeight: __sb?.mh || "auto",
   justifyContent: "flex-start",
   alignItems: "flex-start",
   flexWrap: "wrap",
@@ -16,7 +16,6 @@ const getStyles = (args) => ({
 
 export const parameters = {
   argTypes: {
-    __sb: { table: { disable: true } },
     styles: { table: { disable: true } },
   },
   actions: { argTypesRegex: "^on[A-Z].*" },

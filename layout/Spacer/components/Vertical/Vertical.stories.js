@@ -1,18 +1,19 @@
-import Spacer, { options } from "..";
+import { Vertical } from ".";
+import { options, styles } from "../..";
+
 import {
   getTemplate,
   getListTemplate,
   getOptionsArgTypes,
-} from "../../../helpers/storybook";
+} from "../../../../helpers/storybook";
 
-const Template = getTemplate(Spacer.Vertical);
-const ListTemplate = getListTemplate(Spacer.Vertical);
+const Template = getTemplate(Vertical, styles);
+const ListTemplate = getListTemplate(Vertical, styles);
 
 export default {
   title: "Layout/Spacer/Vertical",
-  component: Spacer.Vertical,
+  component: Vertical,
   args: {
-    __sb: { fd: "row" },
     isVisible: true,
     height: 100,
     maxHeight: 100,
@@ -22,6 +23,7 @@ export default {
     height: { control: "number" },
     maxHeight: { control: "number" },
   },
+  parameters: { __sb: { fd: "row" } },
 };
 export const Default = Template.bind({});
 export const Sizes = ListTemplate.bind({});

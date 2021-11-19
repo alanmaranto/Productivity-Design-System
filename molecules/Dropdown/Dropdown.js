@@ -1,21 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../../atoms/Icon";
-import classNames from "classnames";
 
 import styles from "./Dropdown.module.css";
+import withStyles from "../../hoc/withStyles";
 
-const Dropdown = ({ options, onChange, value, isInline, id }) => {
+export const Dropdown = ({
+  options,
+  onChange,
+  value,
+  isInline,
+  id,
+  getStyles,
+}) => {
   return (
     <div
       id={id}
-      className={classNames(styles.dropdown, {
-        [styles["is-inline"]]: isInline,
+      className={getStyles("dropdown", {
+        "is-inline": isInline,
       })}
     >
       <Icon className="dropdown-icon" name="angleDown" background="highlight" />
       <select
-        className={styles["dropdown-select"]}
+        className={getStyles["dropdown-select"]}
         onChange={(event) => onChange(event?.currentTarget?.value)}
         value={value}
       >
@@ -32,10 +39,12 @@ const Dropdown = ({ options, onChange, value, isInline, id }) => {
 Dropdown.defaultProps = {
   value: "",
   onChange: () => {},
+  getStyles: () => {},
 };
 
 Dropdown.propTypes = {
   onChange: PropTypes.func.isRequired,
+  getStyles: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
@@ -47,4 +56,4 @@ Dropdown.propTypes = {
   isInline: PropTypes.bool,
 };
 
-export default Dropdown;
+export default withStyles(styles)(Dropdown);

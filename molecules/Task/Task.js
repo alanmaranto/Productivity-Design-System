@@ -11,30 +11,32 @@ import Paragraph from "../../atoms/Paragraph";
 import Icon from "../../atoms/Icon";
 
 const handleClick =
-  ({ checked, setChecked, onCheck }) =>
+  ({ isChecked, setIsChecked, isPending, onCheck }) =>
   () => {
-    setChecked(!checked);
-    onCheck(!checked);
+    if (!isPending) {
+      setIsChecked(!isChecked);
+      onCheck(!isChecked);
+    }
   };
 
 export const Task = ({
   children,
-  styles,
-  defaultChecked,
+  getStyles,
+  defaultIsChecked,
   onCheck,
   onDelete,
 }) => {
-  const [checked, setChecked] = useState(defaultChecked);
+  const [isChecked, setIsChecked] = useState(defaultIsChecked);
   return (
-    <Card onClick={handleClick({ checked, setChecked, onCheck })}>
-      <div className={styles("task")}>
-        <div className={styles("content")}>
-          <Check checked={checked} />
-          <Spacer.Vertical size="xs" />
+    <Card onClick={handleClick({ isChecked, setIsChecked, onCheck })}>
+      <div className={getStyles("task")}>
+        <div className={getStyles("content")}>
+          <Check checked={isChecked} />
+          {/* <Spacer.Vertical size="xs" /> */}
           <Paragraph
-            color={checked ? "muted" : "base"}
+            color={isChecked ? "muted" : "base"}
             weight="medium"
-            isStriked={checked}
+            isStriked={isChecked}
           >
             {children}
           </Paragraph>
@@ -55,18 +57,18 @@ export const Task = ({
 
 Task.propTypes = {
   children: PropTypes.node.isRequired,
-  styles: PropTypes.func.isRequired,
+  getStyles: PropTypes.func.isRequired,
   type: PropTypes.oneOf(options.types),
-  defaultChecked: PropTypes.bool,
+  defaultIsChecked: PropTypes.bool,
   onCheck: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
 
 Task.defaultProps = {
-  styles: () => {},
+  getStyles: () => {},
   onCheck: () => {},
   onDelete: () => {},
-  defaultChecked: false,
+  defaultIsChecked: false,
 };
 
 export default withStyles(styles)(Task);

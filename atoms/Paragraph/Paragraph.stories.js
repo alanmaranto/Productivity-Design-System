@@ -1,4 +1,4 @@
-import Paragraph, { options } from ".";
+import Paragraph, { options, styles } from ".";
 import {
   getTemplate,
   getListTemplate,
@@ -20,8 +20,8 @@ export default {
   },
 };
 
-const Template = getTemplate(Paragraph);
-const ListTemplate = getListTemplate(Paragraph);
+const Template = getTemplate(Paragraph, styles);
+const ListTemplate = getListTemplate(Paragraph, styles);
 
 export const Default = Template.bind({});
 

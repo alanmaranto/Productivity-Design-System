@@ -13,7 +13,7 @@ export const Icon = ({
   size,
   className,
   isClickable,
-  styles,
+  getStyles,
 }) => {
   const icon = iconsMap[name];
   const mappedSize = mapSize(size);
@@ -21,7 +21,7 @@ export const Icon = ({
   return (
     <div
       id={id}
-      className={styles(className, "icon", ["color", "size", "background"], {
+      className={getStyles(className, "icon", ["color", "size", "background"], {
         "is-clickable": isClickable || !!onClick,
       })}
       style={{ width: mappedSize, height: mappedSize }}
@@ -44,13 +44,13 @@ Icon.defaultProps = {
   background: "transparent",
   color: "base",
   isClickable: false,
-  styles: () => {},
+  getStyles: () => {},
 };
 
 Icon.propTypes = {
   size: PropTypes.oneOf(options.sizes),
   background: PropTypes.oneOf(options.backgrounds),
-  styles: PropTypes.func.isRequired,
+  getStyles: PropTypes.func.isRequired,
   className: PropTypes.string,
   name: PropTypes.oneOf(options.names).isRequired,
   onClick: PropTypes.func,

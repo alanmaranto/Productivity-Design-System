@@ -3,7 +3,7 @@ import React from "react";
 import { getClasses } from "./styles";
 
 export const getTemplate = (Component, styles) => (args) =>
-  <Component {...args} styles={getClasses(styles)(args)} />;
+  <Component {...args} getStyles={getClasses(styles)(args)} />;
 
 export const getListTemplate =
   (Component, styles) =>
@@ -13,7 +13,7 @@ export const getListTemplate =
         key={idx}
         {...args}
         {...item}
-        styles={getClasses(styles)({ ...args, ...item })}
+        getStyles={getClasses(styles)({ ...args, ...item })}
       />
     ));
 

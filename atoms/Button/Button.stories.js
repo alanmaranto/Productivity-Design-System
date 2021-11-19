@@ -1,4 +1,4 @@
-import Button, { options } from ".";
+import Button, { options, styles } from ".";
 import {
   getOptionsArgTypes,
   getTemplate,
@@ -19,8 +19,8 @@ export default {
   },
 };
 
-const Template = getTemplate(Button);
-const ListTemplate = getListTemplate(Button);
+const Template = getTemplate(Button, styles);
+const ListTemplate = getListTemplate(Button, styles);
 
 export const Default = Template.bind({});
 export const Types = ListTemplate.bind({});

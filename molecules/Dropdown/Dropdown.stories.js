@@ -1,6 +1,7 @@
-import Dropdown from ".";
+import { Dropdown, styles } from ".";
 import { getTemplate } from "../../helpers/storybook";
-const Template = getTemplate(Dropdown);
+const Template = getTemplate(Dropdown, styles);
+
 export default {
   title: "Molecules/Dropdown",
   component: Dropdown,

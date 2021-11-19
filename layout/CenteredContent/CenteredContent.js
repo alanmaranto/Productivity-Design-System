@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 import styles from "./CenteredContent.module.css";
+import withStyles from "../../hoc/withStyles";
 
-const CenteredContent = ({ children, isVisible }) => {
+export const CenteredContent = ({ getStyles, children, isVisible }) => {
   return (
     <div
-      className={classNames(styles["centered-content"], {
-        [styles["is-visible"]]: isVisible,
+      className={getStyles("centered-content", {
+        "is-visible": isVisible,
       })}
     >
       {children}
@@ -17,11 +17,13 @@ const CenteredContent = ({ children, isVisible }) => {
 
 CenteredContent.propTypes = {
   children: PropTypes.node.isRequired,
+  getStyles: PropTypes.func.isRequired,
   isVisible: false,
 };
 
 CenteredContent.defaultProps = {
   isVisible: false,
+  getStyles: () => {},
 };
 
-export default CenteredContent;
+export default withStyles(styles)(CenteredContent);

@@ -6,9 +6,9 @@ import styles from "./Avatar.module.css";
 import { options } from "./constants";
 import withStyles from "../../hoc/withStyles";
 
-export const Avatar = ({ src, size, styles }) => {
+export const Avatar = ({ src, size, getStyles }) => {
   return (
-    <div className={styles("avatar")}>
+    <div className={getStyles("avatar")}>
       <Picture
         src={src}
         width={mapSize(size)}
@@ -21,13 +21,13 @@ export const Avatar = ({ src, size, styles }) => {
 
 Avatar.defaultProps = {
   size: "md",
-  styles: () => {},
+  getStyles: () => {},
 };
 
 Avatar.propTypes = {
   size: PropTypes.oneOf(options.sizes).isRequired,
   src: PropTypes.string.isRequired,
-  styles: PropTypes.func.isRequired,
+  getStyles: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(Avatar);
