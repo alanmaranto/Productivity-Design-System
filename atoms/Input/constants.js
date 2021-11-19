@@ -1,3 +1,3 @@
 export const options = {
-  types: ["text"],
+  types: ['text'],
 };

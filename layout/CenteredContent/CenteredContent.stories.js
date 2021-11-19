@@ -1,11 +1,11 @@
-import { CenteredContent, styles } from ".";
+import { CenteredContent, styles } from '.';
 
-import { getTemplate } from "../../helpers/storybook";
+import { getTemplate } from '../../helpers/storybook';
 
 const Template = getTemplate(CenteredContent, styles);
 
 export default {
-  title: "Layout/CenteredContent",
+  title: 'Layout/CenteredContent',
   component: CenteredContent,
   args: {
     isVisible: true,
@@ -15,7 +15,7 @@ export default {
     Seeing renown knocked battered contend World shepherd. Roof sautéed kingdom agree curtain lived preparing down material Galion appearance! Faramir one-fourteenth study talked amongst fisherman barren recoil responsible. There is one Dwarf yet in Moria who still draws breath. Boats wait exaggerate guessed Muil usurper suffice. Unspoken swears stands serpent depart Mithril. Ugly threat Dwarf possessions yours homage long-term unmade. Well-earned suffice tapestry tongue piled smoke lacerations talisman helps Dragon-Slayer crown? Blanket shan't dare appearances hours grave Muil.`,
   },
   argTypes: {
-    children: { control: "text" },
+    children: { control: 'text' },
   },
 };
 

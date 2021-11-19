@@ -1,18 +1,18 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./Paragraph.module.css";
-import { options } from "./constants";
-import withStyles from "../../hoc/withStyles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Paragraph.module.css';
+import { options } from './constants';
+import withStyles from '../../hoc/withStyles';
 
 export const Paragraph = ({ getStyles, children, className, isStriked }) => {
   return (
     <div
       className={getStyles(
         className,
-        "paragraph",
-        ["color", "size", "weight"],
+        'paragraph',
+        ['color', 'size', 'weight'],
         {
-          "is-striked": isStriked,
+          'is-striked': isStriked,
         }
       )}
     >
@@ -32,9 +32,9 @@ Paragraph.propTypes = {
 };
 
 Paragraph.defaultProps = {
-  size: "md",
-  color: "base",
-  weight: "normal",
+  size: 'md',
+  color: 'base',
+  weight: 'normal',
   getStyles: () => {},
 };
 

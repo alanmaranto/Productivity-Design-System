@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { mapSize } from "./helpers";
-import { options, iconsMap } from "./constants";
-import withStyles from "../../hoc/withStyles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { mapSize } from './helpers';
+import { options, iconsMap } from './constants';
+import withStyles from '../../hoc/withStyles';
 
-import styles from "./Icon.module.css";
+import styles from './Icon.module.css';
 
 export const Icon = ({
   id,
@@ -21,8 +21,8 @@ export const Icon = ({
   return (
     <div
       id={id}
-      className={getStyles(className, "icon", ["color", "size", "background"], {
-        "is-clickable": isClickable || !!onClick,
+      className={getStyles(className, 'icon', ['color', 'size', 'background'], {
+        'is-clickable': isClickable || !!onClick,
       })}
       style={{ width: mappedSize, height: mappedSize }}
       onClick={onClick}
@@ -40,9 +40,9 @@ export const Icon = ({
 };
 
 Icon.defaultProps = {
-  size: "md",
-  background: "transparent",
-  color: "base",
+  size: 'md',
+  background: 'transparent',
+  color: 'base',
   isClickable: false,
   getStyles: () => {},
 };

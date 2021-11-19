@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./Container.module.css";
-import withStyles from "../../hoc/withStyles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Container.module.css';
+import withStyles from '../../hoc/withStyles';
 
 export const Container = ({ getStyles, children, isVisible }) => {
   return (
     <div
-      className={getStyles("container", {
-        "is-visible": isVisible,
+      className={getStyles('container', {
+        'is-visible': isVisible,
       })}
     >
       {children}

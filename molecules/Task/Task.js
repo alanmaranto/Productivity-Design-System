@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import styles from "./Task.module.css";
-import { options } from "./constants";
-import withStyles from "../../hoc/withStyles";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import styles from './Task.module.css';
+import { options } from './constants';
+import withStyles from '../../hoc/withStyles';
 
-import Card from "../../atoms/Card";
-import Check from "../../atoms/Check";
-import Spacer from "../../layout/Spacer";
-import Paragraph from "../../atoms/Paragraph";
-import Icon from "../../atoms/Icon";
+import Card from '../../atoms/Card';
+import Check from '../../atoms/Check';
+import Spacer from '../../layout/Spacer';
+import Paragraph from '../../atoms/Paragraph';
+import Icon from '../../atoms/Icon';
 
 const handleClick =
   ({ isChecked, setIsChecked, isPending, onCheck }) =>
@@ -29,12 +29,12 @@ export const Task = ({
   const [isChecked, setIsChecked] = useState(defaultIsChecked);
   return (
     <Card onClick={handleClick({ isChecked, setIsChecked, onCheck })}>
-      <div className={getStyles("task")}>
-        <div className={getStyles("content")}>
+      <div className={getStyles('task')}>
+        <div className={getStyles('content')}>
           <Check checked={isChecked} />
           {/* <Spacer.Vertical size="xs" /> */}
           <Paragraph
-            color={isChecked ? "muted" : "base"}
+            color={isChecked ? 'muted' : 'base'}
             weight="medium"
             isStriked={isChecked}
           >

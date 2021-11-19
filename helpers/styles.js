@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import classNames from 'classnames';
 
 // ['sizes] => { [styles[`size-${size}`]]: size}
 export const getDynamicClasses = (cssModule = {}, props = {}, classes) => {
@@ -32,9 +32,9 @@ export const getClasses =
       args.map((arg) => {
         if (Array.isArray(arg)) {
           return getDynamicClasses(cssModule, props, arg);
-        } else if (typeof arg === "string") {
+        } else if (typeof arg === 'string') {
           return getModuleClasses(cssModule, arg);
-        } else if (typeof arg === "object") {
+        } else if (typeof arg === 'object') {
           return getObjectClasses(cssModule, arg);
         }
       })

@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { options } from "./constants";
-import styles from "./Card.module.css";
-import withStyles from "../../hoc/withStyles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { options } from './constants';
+import styles from './Card.module.css';
+import withStyles from '../../hoc/withStyles';
 
 export const Card = ({ getStyles, onClick, children }) => {
   return (
     <div
       onClick={onClick}
-      className={getStyles("card", ["color", "size"], {
-        "is-clickable": !!onClick,
+      className={getStyles('card', ['color', 'size'], {
+        'is-clickable': !!onClick,
       })}
     >
       {children}
@@ -18,8 +18,8 @@ export const Card = ({ getStyles, onClick, children }) => {
 };
 
 Card.defaultProps = {
-  color: "base",
-  size: "sm",
+  color: 'base',
+  size: 'sm',
   getStyles: () => {},
 };
 

@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { mapSize } from "../../helpers";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { mapSize } from '../../helpers';
 
-import styles from "../../Spacer.module.css";
-import withStyles from "../../../../hoc/withStyles";
+import styles from '../../Spacer.module.css';
+import withStyles from '../../../../hoc/withStyles';
 
 export const Horizontal = ({ getStyles, size, isVisible }) => (
   <div
-    className={getStyles("spacer", "horizontal", {
-      "is-visible": isVisible,
+    className={getStyles('spacer', 'horizontal', {
+      'is-visible': isVisible,
     })}
     style={{
       height: mapSize(size),
@@ -23,7 +23,7 @@ Horizontal.propTypes = {
 };
 
 Horizontal.defaultProps = {
-  size: "none",
+  size: 'none',
   isVisible: false,
   getStyles: () => {},
 };

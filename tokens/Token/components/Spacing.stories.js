@@ -1,17 +1,17 @@
-import Token from "..";
-import { choices } from "../..";
+import Token from '..';
+import { choices } from '../..';
 
-import { getTemplate, getListTemplate } from "../../../helpers/storybook";
-import { getTokenItems } from "../helpers";
+import { getTemplate, getListTemplate } from '../../../helpers/storybook';
+import { getTokenItems } from '../helpers';
 
 const Template = getTemplate(Token.Spacing);
 const ListTemplate = getListTemplate(Token.Spacing);
 
 export default {
-  title: "Tokens/Spacing",
+  title: 'Tokens/Spacing',
   component: Token.Spacing,
   args: {
-    __sb: { fd: "row" },
+    __sb: { fd: 'row' },
   },
   argTypes: {
     value: { control: null },
@@ -19,11 +19,11 @@ export default {
   },
 };
 
-const getItems = getTokenItems(choices.spacing, "spacing");
+const getItems = getTokenItems(choices.spacing, 'spacing');
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "var(--spacing-none)",
+  label: 'var(--spacing-none)',
   value: choices.spacing.none,
 };
 

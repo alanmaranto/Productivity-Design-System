@@ -1,21 +1,21 @@
 /* eslint-disable no-console */
-const fs = require("fs").promises;
-const enquirer = require("enquirer");
-const { toPascalCase, toKebabCase, toCapitalize } = require("../utils/cases");
-const path = require("path");
+const fs = require('fs').promises;
+const enquirer = require('enquirer');
+const { toPascalCase, toKebabCase, toCapitalize } = require('../utils/cases');
+const path = require('path');
 
 const ATOMIC_DESIGN_TYPES = {
-  atom: "atoms",
-  molecule: "molecules",
-  layout: "layout",
+  atom: 'atoms',
+  molecule: 'molecules',
+  layout: 'layout',
 };
 
-const COMPONENT_TEMPLATE_PATH = "templates/component";
+const COMPONENT_TEMPLATE_PATH = 'templates/component';
 
 function readComponentFile(componentTemplate) {
   return fs.readFile(
     path.join(__dirname, `../${COMPONENT_TEMPLATE_PATH}/${componentTemplate}`),
-    "utf8"
+    'utf8'
   );
 }
 
@@ -42,7 +42,7 @@ function createComponentFolder(componentPath) {
 }
 
 function createComponentFile(componentPath, replacedComponentFile) {
-  return fs.writeFile(componentPath, replacedComponentFile, "utf8");
+  return fs.writeFile(componentPath, replacedComponentFile, 'utf8');
 }
 
 async function createComponent(componentTemplates, type, componentName) {
@@ -56,13 +56,13 @@ async function createComponent(componentTemplates, type, componentName) {
   try {
     await createComponentFolder(atomicComponentPath);
     await createComponentFolder(storiesComponentPath);
-    console.log("🔧 component folder created!");
+    console.log('🔧 component folder created!');
     for (const componentTemplate of componentTemplates) {
       const componentTemplateRenamed = componentTemplate.replace(
         /Component/g,
         toPascalCase(componentName)
       );
-      const componentIsStory = componentTemplate.search("stories") !== -1;
+      const componentIsStory = componentTemplate.search('stories') !== -1;
 
       const componentFile = await readComponentFile(componentTemplate);
       const replacedComponentFile = await replaceComponentFile(
@@ -88,20 +88,20 @@ async function createComponent(componentTemplates, type, componentName) {
 
 async function getPrompParams() {
   let { type } = await enquirer.prompt({
-    type: "select",
-    name: "type",
-    message: "What kind of component would you like to create?",
-    choices: ["atom", "molecule", "layout"],
-    initial: "atom",
+    type: 'select',
+    name: 'type',
+    message: 'What kind of component would you like to create?',
+    choices: ['atom', 'molecule', 'layout'],
+    initial: 'atom',
   });
 
   let { componentName } = await enquirer.prompt({
-    type: "input",
-    name: "componentName",
-    message: "What is the name of the new component?",
+    type: 'input',
+    name: 'componentName',
+    message: 'What is the name of the new component?',
     validate(input) {
-      if (!this.skipped && input.trim().length === 0 && input.trim() !== ",") {
-        return "Please, tell us what is the name of the new component. Try again!";
+      if (!this.skipped && input.trim().length === 0 && input.trim() !== ',') {
+        return 'Please, tell us what is the name of the new component. Try again!';
       }
       return true;
     },

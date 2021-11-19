@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./CenteredContent.module.css";
-import withStyles from "../../hoc/withStyles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './CenteredContent.module.css';
+import withStyles from '../../hoc/withStyles';
 
 export const CenteredContent = ({ getStyles, children, isVisible }) => {
   return (
     <div
-      className={getStyles("centered-content", {
-        "is-visible": isVisible,
+      className={getStyles('centered-content', {
+        'is-visible': isVisible,
       })}
     >
       {children}

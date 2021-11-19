@@ -1,3 +1,3 @@
 export const options = {
-  sizes: ["sm", "md", "lg"],
+  sizes: ['sm', 'md', 'lg'],
 };

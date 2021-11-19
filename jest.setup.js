@@ -1,4 +1,4 @@
-const CONSOLE_LEVELS = ["debug", "info", "warn", "error"];
+const CONSOLE_LEVELS = ['debug', 'info', 'warn', 'error'];
 
 // Notice that by default the levels will be ["error"]
 const allowedConsoleLevels = CONSOLE_LEVELS.slice(

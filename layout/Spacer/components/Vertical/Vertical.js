@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { mapSize } from "../../helpers";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { mapSize } from '../../helpers';
 
-import styles from "../../Spacer.module.css";
-import withStyles from "../../../../hoc/withStyles";
+import styles from '../../Spacer.module.css';
+import withStyles from '../../../../hoc/withStyles';
 
 export const Vertical = ({ getStyles, size, height, maxHeight, isVisible }) => (
   <div
-    className={getStyles("spacer", "vertical", {
-      "is-visible": isVisible,
+    className={getStyles('spacer', 'vertical', {
+      'is-visible': isVisible,
     })}
     style={{
       height,
@@ -27,9 +27,9 @@ Vertical.propTypes = {
 };
 
 Vertical.defaultProps = {
-  size: "none",
-  height: "100%",
-  maxHeight: "auto",
+  size: 'none',
+  height: '100%',
+  maxHeight: 'auto',
   isVisible: false,
   getStyles: () => {},
 };

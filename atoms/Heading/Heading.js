@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { options } from "./constants";
-import withStyles from "../../hoc/withStyles";
-import styles from "./Heading.module.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { options } from './constants';
+import withStyles from '../../hoc/withStyles';
+import styles from './Heading.module.css';
 
 export const Heading = ({ children, getStyles }) => {
   return (
-    <header className={getStyles(["color", "size", "weight"], "heading")}>
+    <header className={getStyles(['color', 'size', 'weight'], 'heading')}>
       {children}
     </header>
   );
@@ -21,10 +21,10 @@ Heading.propTypes = {
 };
 
 Heading.defaultProps = {
-  color: "base",
-  size: "md",
-  weight: "bold",
-  children: "",
+  color: 'base',
+  size: 'md',
+  weight: 'bold',
+  children: '',
 };
 
 export default withStyles(styles)(Heading);

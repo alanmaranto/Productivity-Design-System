@@ -1,4 +1,4 @@
-import { toKebabCase } from "../../utils/cases";
+import { toKebabCase } from '../../utils/cases';
 
 export const getTokenItems = (tokens, tokenKey) => (group) => {
   if (group) {

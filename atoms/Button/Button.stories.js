@@ -1,19 +1,19 @@
-import Button, { options, styles } from ".";
+import Button, { options, styles } from '.';
 import {
   getOptionsArgTypes,
   getTemplate,
   getListTemplate,
-} from "../../helpers/storybook";
+} from '../../helpers/storybook';
 
 export default {
-  title: "Atoms/Button",
+  title: 'Atoms/Button',
   component: Button,
   args: {
-    children: "You shall not pass!",
+    children: 'You shall not pass!',
   },
   argTypes: {
     type: getOptionsArgTypes(options.types),
-    children: { control: "text" },
+    children: { control: 'text' },
     isMuted: { description: 'It requires `type`to be "primary"' },
     onClick: { defaultValue: null },
   },
@@ -35,6 +35,6 @@ Inline.args = {
 
 export const Muted = Template.bind({});
 Muted.args = {
-  type: "primary",
+  type: 'primary',
   isMuted: true,
 };

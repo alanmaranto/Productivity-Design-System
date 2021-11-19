@@ -1,22 +1,22 @@
-import Paragraph, { options, styles } from ".";
+import Paragraph, { options, styles } from '.';
 import {
   getTemplate,
   getListTemplate,
   getOptionsArgTypes,
-} from "../../helpers/storybook";
+} from '../../helpers/storybook';
 
 export default {
-  title: "Atoms/Paragraph",
+  title: 'Atoms/Paragraph',
   component: Paragraph,
   args: {
     children:
-      "Swords are no more use here. Esquire days mountain Fangorn champion brace waiting laboring preparing! Canopy plunder deceit cakehole strange Udùn piled fighters potent?",
+      'Swords are no more use here. Esquire days mountain Fangorn champion brace waiting laboring preparing! Canopy plunder deceit cakehole strange Udùn piled fighters potent?',
   },
   argTypes: {
     color: getOptionsArgTypes(options.colors),
     size: getOptionsArgTypes(options.sizes),
     weight: getOptionsArgTypes(options.weights),
-    children: { control: "text" },
+    children: { control: 'text' },
   },
 };
 

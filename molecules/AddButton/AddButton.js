@@ -1,19 +1,19 @@
-import React, { useState, useRef } from "react";
-import PropTypes from "prop-types";
-import Paragraph from "../../atoms/Paragraph";
-import Icon from "../../atoms/Icon";
-import Spacer from "../../layout/Spacer";
-import styles from "./AddButton.module.css";
+import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
+import Paragraph from '../../atoms/Paragraph';
+import Icon from '../../atoms/Icon';
+import Spacer from '../../layout/Spacer';
+import styles from './AddButton.module.css';
 import {
   handleClick,
   handleOnChange,
   handleOnKeyDown,
   handleBlur,
   handleFocus,
-} from "./handlers";
-import { shouldShowHelpText } from "./helpers";
-import withStyles from "../../hoc/withStyles";
-import { options } from "./constants";
+} from './handlers';
+import { shouldShowHelpText } from './helpers';
+import withStyles from '../../hoc/withStyles';
+import { options } from './constants';
 
 export const AddButton = ({
   children,
@@ -33,14 +33,14 @@ export const AddButton = ({
 
   return (
     <div
-      className={getStyles("add-button", ["type"], {
-        "is-editable": editMode,
-        "is-focused": isFocused,
+      className={getStyles('add-button', ['type'], {
+        'is-editable': editMode,
+        'is-focused': isFocused,
       })}
       onClick={handleClick({ setEditMode, inputRef })}
     >
       {editMode ? (
-        <div className={getStyles("edit-container")}>
+        <div className={getStyles('edit-container')}>
           <input
             ref={inputRef}
             type="text"
@@ -66,7 +66,7 @@ export const AddButton = ({
               <Paragraph
                 size="sm"
                 className="help-text"
-                color={isFocused ? "muted" : "inverted"}
+                color={isFocused ? 'muted' : 'inverted'}
               >
                 {isFocused ? focusHelpText : blurHelpText}
               </Paragraph>
@@ -78,8 +78,8 @@ export const AddButton = ({
         <>
           <Icon
             name={icon}
-            color={type === "primary" ? "base" : "highlight"}
-            background={type === "primary" ? "highlight" : undefined}
+            color={type === 'primary' ? 'base' : 'highlight'}
+            background={type === 'primary' ? 'highlight' : undefined}
           />
           <Spacer.Vertical size="sm" />
           <Paragraph>{children}</Paragraph>
@@ -102,12 +102,12 @@ AddButton.propTypes = {
 };
 
 AddButton.defaultProps = {
-  type: "primary",
-  icon: "plusCircle",
+  type: 'primary',
+  icon: 'plusCircle',
   onAdd: () => {},
   getStyles: () => {},
   defaultEditMode: false,
-  defaultValue: "",
+  defaultValue: '',
 };
 
 export default withStyles(styles)(AddButton);

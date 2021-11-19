@@ -1,19 +1,19 @@
-import { Task, styles, options } from ".";
+import { Task, styles, options } from '.';
 
 import {
   getTemplate,
   getListTemplate,
   getOptionsArgTypes,
-} from "../../helpers/storybook";
+} from '../../helpers/storybook';
 
 const Template = getTemplate(Task, styles);
 const ListTemplate = getListTemplate(Task, styles);
 
 export default {
-  title: "Molecules/Task",
+  title: 'Molecules/Task',
   component: Task,
   args: {
-    children: "Sir Goblin-town feels characters ruined precautions.",
+    children: 'Sir Goblin-town feels characters ruined precautions.',
   },
   argTypes: {
     types: getOptionsArgTypes(options.types),

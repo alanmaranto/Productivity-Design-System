@@ -1,23 +1,23 @@
-import { ButtonIcon, options } from ".";
+import { ButtonIcon, options } from '.';
 import {
   getTemplate,
   getListTemplate,
   getOptionsArgTypes,
-} from "../../helpers/storybook";
+} from '../../helpers/storybook';
 
 const Template = getTemplate(ButtonIcon);
 const ListTemplate = getListTemplate(ButtonIcon);
 
 export default {
-  title: "Molecules/ButtonIcon",
+  title: 'Molecules/ButtonIcon',
   component: ButtonIcon,
   args: {
-    children: "Cowards Agreed",
+    children: 'Cowards Agreed',
   },
   argTypes: {
     type: getOptionsArgTypes(options.types),
     icon: getOptionsArgTypes(options.icons),
-    children: { control: "text" },
+    children: { control: 'text' },
   },
 };
 

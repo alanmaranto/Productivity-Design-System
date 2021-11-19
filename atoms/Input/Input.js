@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { options } from "./constants";
-import styles from "./Input.module.css";
-import withStyles from "../../hoc/withStyles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { options } from './constants';
+import styles from './Input.module.css';
+import withStyles from '../../hoc/withStyles';
 
 export const Input = ({
   type,
@@ -18,18 +18,18 @@ export const Input = ({
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className={getStyles("input", {
-        "is-inline": isInline,
+      className={getStyles('input', {
+        'is-inline': isInline,
       })}
     />
   );
 };
 
 Input.defaultProps = {
-  type: "text",
-  className: "input",
-  value: "",
-  placeholder: "",
+  type: 'text',
+  className: 'input',
+  value: '',
+  placeholder: '',
   isInline: false,
   onChange: () => {},
   getStyles: () => {},

@@ -1,15 +1,15 @@
-import Card, { options, styles } from ".";
+import Card, { options, styles } from '.';
 import {
   getOptionsArgTypes,
   getTemplate,
   getListTemplate,
-} from "../../helpers/storybook";
+} from '../../helpers/storybook';
 
 export default {
-  title: "Atoms/Card",
+  title: 'Atoms/Card',
   component: Card,
   args: {
-    children: "Laceratons coaster sort comings windlance happily Elf-witch",
+    children: 'Laceratons coaster sort comings windlance happily Elf-witch',
   },
   argTypes: {
     color: getOptionsArgTypes(options.colors),

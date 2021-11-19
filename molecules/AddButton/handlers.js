@@ -14,13 +14,13 @@ export const handleOnChange =
 export const handleOnKeyDown =
   ({ onAdd, inputValue, setInputValue, setEditMode }) =>
   (event) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       onAdd(inputValue);
-      setInputValue("");
+      setInputValue('');
       setEditMode(false);
     }
-    if (event.key === "Escape") {
-      setInputValue("");
+    if (event.key === 'Escape') {
+      setInputValue('');
       setEditMode(false);
     }
   };

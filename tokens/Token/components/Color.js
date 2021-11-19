@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "../Token.module.css";
-import Helper from "../Helper";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from '../Token.module.css';
+import Helper from '../Helper';
 
 const Color = ({ label, value }) => {
   return (

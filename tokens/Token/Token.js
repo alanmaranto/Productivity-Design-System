@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Color, Spacing, FontFamily, FontSize } from "./components";
+import { Color, Spacing, FontFamily, FontSize } from './components';
 
 const Token = () => <></>;
 

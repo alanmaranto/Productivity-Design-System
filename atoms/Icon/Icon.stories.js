@@ -1,16 +1,16 @@
-import { Icon, styles, options } from ".";
+import { Icon, styles, options } from '.';
 import {
   getOptionsArgTypes,
   getTemplate,
   getListTemplate,
-} from "../../helpers/storybook";
+} from '../../helpers/storybook';
 
 export default {
-  title: "Atoms/Icon",
+  title: 'Atoms/Icon',
   component: Icon,
   args: {
-    __sb: { fd: "row" },
-    name: "arrowRight",
+    __sb: { fd: 'row' },
+    name: 'arrowRight',
   },
   argTypes: {
     color: getOptionsArgTypes(options.colors),

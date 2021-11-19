@@ -131,8 +131,8 @@
   --media-query-max-width-md: 991.98px;
   --media-query-max-width-lg: 1199px;
 
-  --font-family-sans: Quicksand, Arial, sans-serif;
-  --font-family-mono: "Roboto Mono", "Courier New", monospace;
+  --font-family-sans: Quicksand,Arial,sans-serif;
+  --font-family-mono: 'Roboto Mono','Courier New',monospace;
 
   --font-size-base: 10px;
   --font-size-xs: 1.1rem;
@@ -167,6 +167,7 @@
   --letter-spacing-widest: 0.1em;
 
   --box-shadow-none: none;
+  --box-shadow-xs: 0px 3px 6px rgba(0, 0, 0, 0.05);
   --box-shadow-sm: 0px 4px 5px rgba(0, 0, 0, 0.07);
 
   --border-radius-none: 0;

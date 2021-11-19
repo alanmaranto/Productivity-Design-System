@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Icon from "../../atoms/Icon";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Icon from '../../atoms/Icon';
 
-import styles from "./Dropdown.module.css";
-import withStyles from "../../hoc/withStyles";
+import styles from './Dropdown.module.css';
+import withStyles from '../../hoc/withStyles';
 
 export const Dropdown = ({
   options,
@@ -16,13 +16,13 @@ export const Dropdown = ({
   return (
     <div
       id={id}
-      className={getStyles("dropdown", {
-        "is-inline": isInline,
+      className={getStyles('dropdown', {
+        'is-inline': isInline,
       })}
     >
       <Icon className="dropdown-icon" name="angleDown" background="highlight" />
       <select
-        className={getStyles["dropdown-select"]}
+        className={getStyles['dropdown-select']}
         onChange={(event) => onChange(event?.currentTarget?.value)}
         value={value}
       >
@@ -37,7 +37,7 @@ export const Dropdown = ({
 };
 
 Dropdown.defaultProps = {
-  value: "",
+  value: '',
   onChange: () => {},
   getStyles: () => {},
 };

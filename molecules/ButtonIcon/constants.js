@@ -1,6 +1,6 @@
-import { options as iconOptions } from "../../atoms/Icon/constants";
+import { options as iconOptions } from '../../atoms/Icon/constants';
 
 export const options = {
-  types: ["primary", "secondary"],
+  types: ['primary', 'secondary'],
   icons: iconOptions.names,
 };

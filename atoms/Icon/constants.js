@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export const iconsMap = {
   arrowUp: {
-    viewBox: "-1 -1 19 19",
+    viewBox: '-1 -1 19 19',
     svg: (
       <>
         <path
@@ -24,7 +24,7 @@ export const iconsMap = {
     ),
   },
   arrowRight: {
-    viewBox: "0 0 19 20",
+    viewBox: '0 0 19 20',
     svg: (
       <>
         <path
@@ -41,7 +41,7 @@ export const iconsMap = {
     ),
   },
   angleDown: {
-    viewBox: "0 0 15 9",
+    viewBox: '0 0 15 9',
     svg: (
       <path
         fillRule="evenodd"
@@ -51,7 +51,7 @@ export const iconsMap = {
     ),
   },
   angleLeft: {
-    viewBox: "-3 0 20 20",
+    viewBox: '-3 0 20 20',
     svg: (
       <path
         fillRule="evenodd"
@@ -61,7 +61,7 @@ export const iconsMap = {
     ),
   },
   angleUp: {
-    viewBox: "0 0 9 6",
+    viewBox: '0 0 9 6',
     svg: (
       <path
         fillRule="evenodd"
@@ -71,7 +71,7 @@ export const iconsMap = {
     ),
   },
   pauseCircle: {
-    viewBox: "0 0 28 28",
+    viewBox: '0 0 28 28',
     svg: (
       <>
         <path
@@ -93,7 +93,7 @@ export const iconsMap = {
     ),
   },
   checkCircle: {
-    viewBox: "5 1 20 20",
+    viewBox: '5 1 20 20',
     svg: (
       <>
         <path
@@ -110,7 +110,7 @@ export const iconsMap = {
     ),
   },
   plusCircle: {
-    viewBox: "0 0 20 20",
+    viewBox: '0 0 20 20',
     svg: (
       <>
         <path
@@ -132,7 +132,7 @@ export const iconsMap = {
     ),
   },
   trash: {
-    viewBox: "-1 0 12 12",
+    viewBox: '-1 0 12 12',
     svg: (
       <>
         <path
@@ -169,7 +169,7 @@ export const iconsMap = {
     ),
   },
   tag: {
-    viewBox: "0 0 19 19",
+    viewBox: '0 0 19 19',
     svg: (
       <>
         <path
@@ -186,7 +186,7 @@ export const iconsMap = {
     ),
   },
   clock: {
-    viewBox: "-1 0 21 20",
+    viewBox: '-1 0 21 20',
     svg: (
       <>
         <path
@@ -203,7 +203,7 @@ export const iconsMap = {
     ),
   },
   user: {
-    viewBox: "0 0 14 15",
+    viewBox: '0 0 14 15',
     svg: (
       <path
         fillRule="evenodd"
@@ -213,7 +213,7 @@ export const iconsMap = {
     ),
   },
   grip: {
-    viewBox: "-2 0 14 15",
+    viewBox: '-2 0 14 15',
     svg: (
       <path d="M0 14V12H2V14H0ZM4 14V12H6V14H4ZM8 14V12H10V14H8ZM0 10V8H2V10H0ZM4 10V8H6V10H4ZM8 10V8H10V10H8ZM0 6V4H2V6H0ZM4 6V4H6V6H4ZM8 6V4H10V6H8ZM0 2V0H2V2H0ZM4 2V0H6V2H4ZM8 2V0H10V2H8Z" />
     ),
@@ -221,15 +221,15 @@ export const iconsMap = {
 };
 
 export const options = {
-  sizes: ["sm", "md", "lg", "xl"],
+  sizes: ['sm', 'md', 'lg', 'xl'],
   names: Object.keys(iconsMap),
-  colors: ["base", "highlight", "muted", "primary", "inverted"],
+  colors: ['base', 'highlight', 'muted', 'primary', 'inverted'],
   backgrounds: [
-    "transparent",
-    "base",
-    "highlight",
-    "inverted",
-    "muted",
-    "spotlight",
+    'transparent',
+    'base',
+    'highlight',
+    'inverted',
+    'muted',
+    'spotlight',
   ],
 };

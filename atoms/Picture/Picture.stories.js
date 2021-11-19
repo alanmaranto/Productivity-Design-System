@@ -1,19 +1,19 @@
-import { Picture, styles } from ".";
+import { Picture, styles } from '.';
 
-import { getTemplate } from "../../helpers/storybook";
+import { getTemplate } from '../../helpers/storybook';
 
 const Template = getTemplate(Picture, styles);
 
 export default {
-  title: "Atoms/Picture",
+  title: 'Atoms/Picture',
   component: Picture,
   args: {
-    src: "https://picsum.photos/id/1033/400/400",
+    src: 'https://picsum.photos/id/1033/400/400',
     width: 200,
   },
   argTypes: {
-    width: { control: "number" },
-    height: { control: "number" },
+    width: { control: 'number' },
+    height: { control: 'number' },
   },
 };
 
@@ -25,7 +25,7 @@ export const Border = Template.bind({});
 Border.args = { withBorder: true };
 
 export const Height = Template.bind({});
-Height.args = { src: "https://picsum.photos/id/1033/400/800", height: 400 };
+Height.args = { src: 'https://picsum.photos/id/1033/400/800', height: 400 };
 
 export const Width = Template.bind({});
-Width.args = { src: "https://picsum.photos/id/1033/800/400", width: 400 };
+Width.args = { src: 'https://picsum.photos/id/1033/800/400', width: 400 };

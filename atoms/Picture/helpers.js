@@ -1,4 +1,4 @@
 export const getWidth = (width) =>
-  typeof width === "string" ? width : `${width}px`;
+  typeof width === 'string' ? width : `${width}px`;
 
 export default getWidth;

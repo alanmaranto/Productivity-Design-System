@@ -1,16 +1,16 @@
-import { Component, styles, options } from ".";
+import { Component, styles, options } from '.';
 
 import {
   getTemplate,
   getListTemplate,
   getOptionsArgTypes,
-} from "../../helpers/storybook";
+} from '../../helpers/storybook';
 
 const Template = getTemplate(Component, styles);
 const ListTemplate = getListTemplate(Component, styles);
 
 export default {
-  title: "Atomic/Component",
+  title: 'Atomic/Component',
   component: Component,
   args: {},
   argTypes: {

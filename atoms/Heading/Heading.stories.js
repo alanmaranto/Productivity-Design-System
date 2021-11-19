@@ -1,21 +1,21 @@
-import { Heading, styles, options } from ".";
+import { Heading, styles, options } from '.';
 import {
   getOptionsArgTypes,
   getTemplate,
   getListTemplate,
-} from "../../helpers/storybook";
+} from '../../helpers/storybook';
 
 export default {
-  title: "Atoms/Heading",
+  title: 'Atoms/Heading',
   component: Heading,
   args: {
-    children: "Consent doubt TuckBorleje challeng destroying",
+    children: 'Consent doubt TuckBorleje challeng destroying',
   },
   argTypes: {
     color: getOptionsArgTypes(options.colors),
     size: getOptionsArgTypes(options.sizes),
     weight: getOptionsArgTypes(options.weights),
-    children: { control: "text" },
+    children: { control: 'text' },
   },
 };
 

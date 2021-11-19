@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Spacer from "../../../layout/Spacer";
-import Helper from "../Helper";
+import Spacer from '../../../layout/Spacer';
+import Helper from '../Helper';
 
-import styles from "../Token.module.css";
+import styles from '../Token.module.css';
 
 const Spacing = ({ label, value }) => {
   return (

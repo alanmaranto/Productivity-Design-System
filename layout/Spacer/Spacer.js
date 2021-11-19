@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Horizontal, Vertical } from "./components";
+import { Horizontal, Vertical } from './components';
 
-import styles from "./Spacer.module.css";
-import { mapSize } from "./helpers";
-import withStyles from "../../hoc/withStyles";
+import styles from './Spacer.module.css';
+import { mapSize } from './helpers';
+import withStyles from '../../hoc/withStyles';
 
 export const Spacer = ({ getStyles, size, isVisible }) => (
   <div
-    className={getStyles("spacer", {
-      "is-visible": isVisible,
+    className={getStyles('spacer', {
+      'is-visible': isVisible,
     })}
     style={{
-      display: "inline-block",
+      display: 'inline-block',
       width: mapSize(size),
       height: mapSize(size),
     }}
@@ -27,7 +27,7 @@ Spacer.propTypes = {
 };
 
 Spacer.defaultProps = {
-  size: "none",
+  size: 'none',
   isVisible: false,
   getStyles: () => {},
 };

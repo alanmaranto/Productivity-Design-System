@@ -1,0 +1,5 @@
+{
+  "*.js": "npm run lint:js:fix",
+  "*.json": "npm run lint:json:fix",
+  "*.css": "npm run lint:css:fix"
+}

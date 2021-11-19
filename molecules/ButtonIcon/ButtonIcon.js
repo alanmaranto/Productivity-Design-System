@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Spacer from "../../layout/Spacer";
-import Button from "../../atoms/Button";
-import Icon from "../../atoms/Icon";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Spacer from '../../layout/Spacer';
+import Button from '../../atoms/Button';
+import Icon from '../../atoms/Icon';
 
-import { options } from "./constants";
+import { options } from './constants';
 
 export const ButtonIcon = ({ children, type, icon }) => (
   <Button
@@ -16,7 +16,7 @@ export const ButtonIcon = ({ children, type, icon }) => (
           <Spacer.Vertical size="xs" />
           <Icon
             name={icon}
-            color={type === "primary" ? "inverted" : "primary"}
+            color={type === 'primary' ? 'inverted' : 'primary'}
           />
         </>
       ),
@@ -33,8 +33,8 @@ ButtonIcon.propTypes = {
 };
 
 ButtonIcon.defaultProps = {
-  type: "secondary",
-  icon: "arrowRight",
+  type: 'secondary',
+  icon: 'arrowRight',
 };
 
 export default ButtonIcon;

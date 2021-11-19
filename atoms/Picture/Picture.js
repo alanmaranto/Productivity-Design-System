@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { getWidth } from "./helpers";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { getWidth } from './helpers';
 
-import styles from "./Picture.module.css";
-import withStyles from "../../hoc/withStyles";
+import styles from './Picture.module.css';
+import withStyles from '../../hoc/withStyles';
 
 export const Picture = ({
   width,
@@ -14,9 +14,9 @@ export const Picture = ({
   getStyles,
 }) => (
   <picture
-    className={getStyles("picture", {
-      "is-rounded": isRounded,
-      "with-border": withBorder,
+    className={getStyles('picture', {
+      'is-rounded': isRounded,
+      'with-border': withBorder,
     })}
   >
     <img src={src} style={{ height, maxWidth: getWidth(width) }}></img>
@@ -24,7 +24,7 @@ export const Picture = ({
 );
 
 Picture.defaultProps = {
-  height: "auto",
+  height: 'auto',
   withBorder: false,
   getStyles: () => {},
 };

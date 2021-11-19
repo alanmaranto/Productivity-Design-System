@@ -1,16 +1,16 @@
-import { Avatar, styles, options } from ".";
+import { Avatar, styles, options } from '.';
 import {
   getOptionsArgTypes,
   getTemplate,
   getListTemplate,
-} from "../../helpers/storybook";
+} from '../../helpers/storybook';
 
 export default {
-  title: "Atoms/Avatar",
+  title: 'Atoms/Avatar',
   component: Avatar,
   args: {
-    __sb: { fd: "row " },
-    src: "https://placeimg.com/200/200/any",
+    __sb: { fd: 'row ' },
+    src: 'https://placeimg.com/200/200/any',
   },
   argTypes: {
     size: getOptionsArgTypes(options.sizes),

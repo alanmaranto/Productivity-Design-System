@@ -1,10 +1,10 @@
-import { Check, styles } from ".";
-import { getTemplate } from "../../helpers/storybook";
+import { Check, styles } from '.';
+import { getTemplate } from '../../helpers/storybook';
 
 const Template = getTemplate(Check, styles);
 
 export default {
-  title: "Atoms/Check",
+  title: 'Atoms/Check',
   component: Check,
 };
 

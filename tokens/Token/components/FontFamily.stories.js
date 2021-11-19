@@ -1,14 +1,14 @@
-import Token from "..";
-import { choices } from "../..";
+import Token from '..';
+import { choices } from '../..';
 
-import { getTemplate, getListTemplate } from "../../../helpers/storybook";
-import { getTokenItems } from "../helpers";
+import { getTemplate, getListTemplate } from '../../../helpers/storybook';
+import { getTokenItems } from '../helpers';
 
 const Template = getTemplate(Token.FontFamily);
 const ListTemplate = getListTemplate(Token.FontFamily);
 
 export default {
-  title: "Tokens/FontFamily",
+  title: 'Tokens/FontFamily',
   component: Token.FontFamily,
   args: {
     children:
@@ -20,11 +20,11 @@ export default {
   },
 };
 
-const getItems = getTokenItems(choices.fontFamily, "fontFamily");
+const getItems = getTokenItems(choices.fontFamily, 'fontFamily');
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "var(--font-family-sans)",
+  label: 'var(--font-family-sans)',
   value: choices.fontFamily.sans,
 };
 

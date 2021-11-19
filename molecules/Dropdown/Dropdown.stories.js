@@ -1,28 +1,28 @@
-import { Dropdown, styles } from ".";
-import { getTemplate } from "../../helpers/storybook";
+import { Dropdown, styles } from '.';
+import { getTemplate } from '../../helpers/storybook';
 const Template = getTemplate(Dropdown, styles);
 
 export default {
-  title: "Molecules/Dropdown",
+  title: 'Molecules/Dropdown',
   component: Dropdown,
   args: {
     options: [
       {
-        text: "8:00 AM",
+        text: '8:00 AM',
         value: 800,
       },
       {
-        text: "1:00 PM",
+        text: '1:00 PM',
         value: 1300,
       },
     ],
   },
   argTypes: {
     options: {
-      description: "**array of shaped objects:**",
+      description: '**array of shaped objects:**',
       table: {
         type: {
-          summary: "object",
+          summary: 'object',
           detail: "{ text: 'string', value: 'string|number'}",
         },
       },

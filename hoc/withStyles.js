@@ -1,5 +1,5 @@
-import React from "react";
-import { getClasses } from "../helpers/styles";
+import React from 'react';
+import { getClasses } from '../helpers/styles';
 
 const withStyles = (styles) => (WrappedComponent) => {
   const WithStylesComponent = (props) => {

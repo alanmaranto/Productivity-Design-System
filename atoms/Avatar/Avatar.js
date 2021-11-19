@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Picture from "../Picture";
-import { mapSize } from "./helpers";
-import styles from "./Avatar.module.css";
-import { options } from "./constants";
-import withStyles from "../../hoc/withStyles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Picture from '../Picture';
+import { mapSize } from './helpers';
+import styles from './Avatar.module.css';
+import { options } from './constants';
+import withStyles from '../../hoc/withStyles';
 
 export const Avatar = ({ src, size, getStyles }) => {
   return (
-    <div className={getStyles("avatar")}>
+    <div className={getStyles('avatar')}>
       <Picture
         src={src}
         width={mapSize(size)}
@@ -20,7 +20,7 @@ export const Avatar = ({ src, size, getStyles }) => {
 };
 
 Avatar.defaultProps = {
-  size: "md",
+  size: 'md',
   getStyles: () => {},
 };
 

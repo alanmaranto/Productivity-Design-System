@@ -1,9 +1,9 @@
 function toKebabCase(str) {
   // return str.replace(/([a-zA-Z])(?=[A-Z])/g, "$1-").toLowerCase();
   return str
-    .replace(/([A-Z])([A-Z])/g, "$1-$2")
-    .replace(/([a-z])([A-Z])/g, "$1-$2")
-    .replace(/[\s_]+/g, "-")
+    .replace(/([A-Z])([A-Z])/g, '$1-$2')
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/[\s_]+/g, '-')
     .toLowerCase();
 }
 
@@ -20,7 +20,7 @@ function toPascalCase(str) {
         /\w\S*/g,
         (word) => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()
       )
-      .replace(/ /g, "");
+      .replace(/ /g, '');
   } else {
     return str;
   }

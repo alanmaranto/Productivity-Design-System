@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { options } from "./constants";
-import Heading from "../Heading";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { options } from './constants';
+import Heading from '../Heading';
 
-import styles from "./Button.module.css";
-import withStyles from "../../hoc/withStyles";
+import styles from './Button.module.css';
+import withStyles from '../../hoc/withStyles';
 
 const Button = ({
   children,
@@ -16,14 +16,14 @@ const Button = ({
   addons,
 }) => (
   <button
-    className={getStyles("button", ["type"], {
-      "is-inline": isInline || type === "tertiary",
-      "is-muted": isMuted && type === "primary",
+    className={getStyles('button', ['type'], {
+      'is-inline': isInline || type === 'tertiary',
+      'is-muted': isMuted && type === 'primary',
     })}
     onClick={onClick}
   >
     {addons && addons.prepend}
-    <Heading color={type === "primary" ? "inverted" : "primary"}>
+    <Heading color={type === 'primary' ? 'inverted' : 'primary'}>
       {children}
     </Heading>
     {addons && addons.prepend}
@@ -44,7 +44,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  type: "primary",
+  type: 'primary',
   isInline: true,
   onChange: () => {},
   getStyles: () => {},

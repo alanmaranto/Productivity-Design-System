@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styles from "./Check.module.css";
-import withStyles from "../../hoc/withStyles";
-import Icon from "../Icon";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styles from './Check.module.css';
+import withStyles from '../../hoc/withStyles';
+import Icon from '../Icon';
 
 export const Check = ({ checked, getStyles }) => {
   return checked ? (
     <Icon name="checkCircle" color="muted" isClickable />
   ) : (
-    <span className={getStyles("check")} />
+    <span className={getStyles('check')} />
   );
 };
 

@@ -1,3 +1,3 @@
 export const options = {
-  types: ["primary", "secondary", "tertiary"],
+  types: ['primary', 'secondary', 'tertiary'],
 };
