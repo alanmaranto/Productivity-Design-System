@@ -5,18 +5,93 @@ on:
       - main
 jobs:
   release:
-    name: Release
+    name: Build, Lint, and Test
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-18.04
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v1
-      - name: Setup Node.js
+      - name: Setup Node.js v15
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 15
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Release
+      - name: Lint code
+        run: yarn lint
+      - name: Run tests
+        run: yarn test
+      - name: Build storybook
+        run: yarn build
+  visual:
+    name: Vistual testing
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js v15
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build storybook
+        run: yarn build
+      - name: Publish in Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
+          storybookBuildDir: 'storybook-static'
+  deploy:
+    name: Deploy Storybook
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js v15
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build storybook docs
+        run: yarn build:docs
+      - name: Deploy in Vercel (prod)
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+          vercel-args: '--prod'
+  release:
+    name: Release package
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        # with:
+        #   token: ${{ secrets.GITHUB_TOKEN }}
+          # token: ${{ secrets.GH_SEMANTIC_RELEASE_TOKEN }}
+      - name: Setup Node.js v15
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Lint code
+        run: yarn lint
+      - name: Run tests
+        run: yarn test
+      - name: Build storybook
+        run: yarn build
+      - name: Publish in NPM
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

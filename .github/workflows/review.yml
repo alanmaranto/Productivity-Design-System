@@ -1,15 +1,16 @@
 name: Code Review
 on:
-  push:
-    - main
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
-    name: Build
-    runs-on: ubuntu-18.04
+    name: Build, Lint, and Test
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Setup Node.js
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js v12
         uses: actions/setup-node@v1
         with:
           node-version: 12
@@ -19,8 +20,46 @@ jobs:
         run: yarn lint
       - name: Run Tests
         run: yarn test
-      - name: Run Chromatic
+      - name: Build storybook
+        run: yarn build
+  deploy:
+    name: Deploy storybook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build storybook
+        run: yarn build
+      - name: Deploy in Vercel (stag)
+        uses: amondnet/vercel-action@v19
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID}}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID}}
+  visual:
+    name: Visual testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build storybook
+        run: yarn build
+      - name: Publish in Chromatic
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
+          storybookBuildDir: 'storybook-static'
