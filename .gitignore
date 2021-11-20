@@ -4,3 +4,4 @@ node_modules
 build-storybook.log
 .vercel
 !atoms/Icon
+storybook-static
