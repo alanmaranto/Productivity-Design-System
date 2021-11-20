@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Molecules/ButtonIcon Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <button
+    className="button type-secondary is-inline"
+  >
+    <header
+      className="color-primary size-md weight-bold heading"
+    >
+      Cowards Agreed
+    </header>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Molecules/ButtonIcon Types 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <button
+    className="button type-primary is-inline"
+  >
+    <header
+      className="color-inverted size-md weight-bold heading"
+    >
+      Cowards Agreed
+    </header>
+  </button>
+  <button
+    className="button type-secondary is-inline"
+  >
+    <header
+      className="color-primary size-md weight-bold heading"
+    >
+      Cowards Agreed
+    </header>
+  </button>
+</div>
+`;

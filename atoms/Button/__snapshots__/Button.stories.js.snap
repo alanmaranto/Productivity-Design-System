@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atoms/Button Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <button
+    className="button is-inline"
+    onClick={null}
+  >
+    <header
+      className="color-inverted size-md weight-bold heading"
+    >
+      You shall not pass!
+    </header>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Atoms/Button Inline 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <button
+    className="button is-inline"
+    onClick={null}
+  >
+    <header
+      className="color-inverted size-md weight-bold heading"
+    >
+      You shall not pass!
+    </header>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Atoms/Button Muted 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <button
+    className="button type-primary is-inline is-muted"
+    onClick={null}
+  >
+    <header
+      className="color-inverted size-md weight-bold heading"
+    >
+      You shall not pass!
+    </header>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Atoms/Button Types 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <button
+    className="button type-primary is-inline"
+    onClick={null}
+  >
+    <header
+      className="color-inverted size-md weight-bold heading"
+    >
+      You shall not pass!
+    </header>
+  </button>
+  <button
+    className="button type-secondary is-inline"
+    onClick={null}
+  >
+    <header
+      className="color-primary size-md weight-bold heading"
+    >
+      You shall not pass!
+    </header>
+  </button>
+  <button
+    className="button type-tertiary is-inline"
+    onClick={null}
+  >
+    <header
+      className="color-primary size-md weight-bold heading"
+    >
+      You shall not pass!
+    </header>
+  </button>
+</div>
+`;

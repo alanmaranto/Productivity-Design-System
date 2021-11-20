@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atoms/Heading Colors 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <header
+    className="color-base heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+  <header
+    className="color-primary heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+  <header
+    className="color-inverted heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+</div>
+`;
+
+exports[`Storyshots Atoms/Heading Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <header
+    className="heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+</div>
+`;
+
+exports[`Storyshots Atoms/Heading Sizes 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <header
+    className="size-xs heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+  <header
+    className="size-sm heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+  <header
+    className="size-md heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+  <header
+    className="size-lg heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+  <header
+    className="size-xl heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+  <header
+    className="size-2xl heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+</div>
+`;
+
+exports[`Storyshots Atoms/Heading Weights 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <header
+    className="weight-normal heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+  <header
+    className="weight-bold heading"
+  >
+    Consent doubt TuckBorleje challeng destroying
+  </header>
+</div>
+`;

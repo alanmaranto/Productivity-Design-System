@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Layout/FullHeightContent Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <div
+    className="full-height-content is-visible"
+  >
+    <div
+      className="content"
+    >
+      Mice defiling required Bilbo sailing unspoiled this hunting. 14th refuge knowing breath Middle-earth sack demon children?
+      Ambition living aid indeed mutton suffered l failing kindness Éothain? Red others Goblin-town spot stuff riddles hero?
+    </div>
+    <div
+      className="footer"
+    >
+      Ambition living aid indeed mutton suffered l failing kindness Éothain? Red others Goblin-town spot stuff riddles hero?
+    </div>
+  </div>
+</div>
+`;

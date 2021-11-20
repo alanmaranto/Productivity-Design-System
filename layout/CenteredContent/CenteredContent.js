@@ -18,7 +18,7 @@ export const CenteredContent = ({ getStyles, children, isVisible }) => {
 CenteredContent.propTypes = {
   children: PropTypes.node.isRequired,
   getStyles: PropTypes.func.isRequired,
-  isVisible: false,
+  isVisible: PropTypes.bool,
 };
 
 CenteredContent.defaultProps = {

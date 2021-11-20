@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atoms/Card Colors 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <div
+    className="card color-base"
+  >
+    Laceratons coaster sort comings windlance happily Elf-witch
+  </div>
+  <div
+    className="card color-primary"
+  >
+    Laceratons coaster sort comings windlance happily Elf-witch
+  </div>
+  <div
+    className="card color-secondary"
+  >
+    Laceratons coaster sort comings windlance happily Elf-witch
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Card Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <div
+    className="card"
+  >
+    Laceratons coaster sort comings windlance happily Elf-witch
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Card Sizes 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <div
+    className="card size-sm"
+  >
+    Laceratons coaster sort comings windlance happily Elf-witch
+  </div>
+  <div
+    className="card size-md"
+  >
+    Laceratons coaster sort comings windlance happily Elf-witch
+  </div>
+  <div
+    className="card size-lg"
+  >
+    Laceratons coaster sort comings windlance happily Elf-witch
+  </div>
+</div>
+`;
