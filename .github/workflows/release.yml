@@ -24,7 +24,7 @@ jobs:
       - name: Build storybook
         run: yarn build
   visual:
-    name: Vistual testing
+    name: Visual testing
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     runs-on: ubuntu-latest
     steps:
@@ -76,9 +76,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        # with:
-        #   token: ${{ secrets.GITHUB_TOKEN }}
-          # token: ${{ secrets.GH_SEMANTIC_RELEASE_TOKEN }}
+        with:
+          token: ${{ secrets.GH_TOKEN_SEMANTIC_RELEASE }}
       - name: Setup Node.js v14.15.0
         uses: actions/setup-node@v1
         with:
