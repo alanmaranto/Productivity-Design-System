@@ -4,9 +4,6 @@
   "private": false,
   "description": "A components library to create apps from zero to production",
   "main": "index.js",
-  "release": {
-    "branches": ["master", "next"]
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alanmaranto/Productivity-Design-System.git"
