@@ -8,11 +8,6 @@
     "type": "git",
     "url": "https://github.com/alanmaranto/Productivity-Design-System.git"
   },
-  "release": {
-    "branches": [
-      "master"
-    ]
-  },
   "scripts": {
     "build:storybook": "build-storybook",
     "build:tokens": "node ./scripts/build-custom-properties",
@@ -48,8 +43,10 @@
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "7.15.0",
     "@babel/preset-react": "7.14.5",
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
+    "@semantic-release/changelog": "5.0.1",
     "@semantic-release/git": "9.0.0",
-    "@semantic-release/github": "7.2.3",
     "@storybook/addon-actions": "^6.3.5",
     "@storybook/addon-essentials": "^6.3.5",
     "@storybook/addon-links": "^6.3.5",
@@ -59,6 +56,7 @@
     "babel-loader": "8.1.0",
     "chromatic": "5.9.2",
     "classnames": "2.3.1",
+    "commitizen": "4.2.2",
     "concurrently": "6.3.0",
     "enquirer": "2.3.6",
     "eslint": "^7.32.0",
@@ -90,11 +88,5 @@
   "lint-staged": {
     "*.js": "npm run lint:js",
     "*.css": "npm run lint:css"
-  },
-  "dependencies": {
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
-    "@semantic-release/changelog": "5.0.1",
-    "commitizen": "4.2.2"
   }
 }
