@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Atoms/Card Clickable 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <div
+    className="card is-clickable"
+  >
+    Laceratons coaster sort comings windlance happily Elf-witch
+  </div>
+</div>
+`;
+
 exports[`Storyshots Atoms/Card Colors 1`] = `
 <div
   style={
@@ -50,6 +73,29 @@ exports[`Storyshots Atoms/Card Default 1`] = `
 >
   <div
     className="card"
+  >
+    Laceratons coaster sort comings windlance happily Elf-witch
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Card Dragabble 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <div
+    className="card is-draggable"
   >
     Laceratons coaster sort comings windlance happily Elf-witch
   </div>

@@ -1,5 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Atoms/Button Addon Append 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    <header
+      className="color-inverted size-md weight-bold heading"
+    >
+      You shall not pass default!
+    </header>
+    But ill-tempered Thengel.
+  </button>
+</div>
+`;
+
+exports[`Storyshots Atoms/Button Addon Prepend 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "display": "flex",
+      "flexDirection": "column",
+      "flexWrap": "wrap",
+      "gap": "10px 30px",
+      "height": "100%",
+      "justifyContent": "flex-start",
+      "maxHeight": "auto",
+    }
+  }
+>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    Dare Erebor forgive most.
+    <header
+      className="color-inverted size-md weight-bold heading"
+    >
+      You shall not pass default!
+    </header>
+  </button>
+</div>
+`;
+
 exports[`Storyshots Atoms/Button Default 1`] = `
 <div
   style={
@@ -16,13 +74,13 @@ exports[`Storyshots Atoms/Button Default 1`] = `
   }
 >
   <button
-    className="button is-inline"
-    onClick={null}
+    className="button"
+    onClick={[Function]}
   >
     <header
       className="color-inverted size-md weight-bold heading"
     >
-      You shall not pass!
+      You shall not pass default!
     </header>
   </button>
 </div>
@@ -45,12 +103,12 @@ exports[`Storyshots Atoms/Button Inline 1`] = `
 >
   <button
     className="button is-inline"
-    onClick={null}
+    onClick={[Function]}
   >
     <header
       className="color-inverted size-md weight-bold heading"
     >
-      You shall not pass!
+      You shall not pass default!
     </header>
   </button>
 </div>
@@ -72,13 +130,13 @@ exports[`Storyshots Atoms/Button Muted 1`] = `
   }
 >
   <button
-    className="button type-primary is-inline is-muted"
-    onClick={null}
+    className="button type-primary is-muted"
+    onClick={[Function]}
   >
     <header
       className="color-inverted size-md weight-bold heading"
     >
-      You shall not pass!
+      You shall not pass default!
     </header>
   </button>
 </div>
@@ -100,33 +158,33 @@ exports[`Storyshots Atoms/Button Types 1`] = `
   }
 >
   <button
-    className="button type-primary is-inline"
-    onClick={null}
+    className="button type-primary"
+    onClick={[Function]}
   >
     <header
       className="color-inverted size-md weight-bold heading"
     >
-      You shall not pass!
+      You shall not pass default!
     </header>
   </button>
   <button
-    className="button type-secondary is-inline"
-    onClick={null}
+    className="button type-secondary"
+    onClick={[Function]}
   >
     <header
       className="color-primary size-md weight-bold heading"
     >
-      You shall not pass!
+      You shall not pass default!
     </header>
   </button>
   <button
     className="button type-tertiary is-inline"
-    onClick={null}
+    onClick={[Function]}
   >
     <header
       className="color-primary size-md weight-bold heading"
     >
-      You shall not pass!
+      You shall not pass default!
     </header>
   </button>
 </div>
