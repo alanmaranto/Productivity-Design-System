@@ -11,13 +11,11 @@ const ListTemplate = getListTemplate(Token.Color);
 export default {
   title: 'Tokens/Color',
   component: Token.Color,
-  args: {
-    __sb: { mh: 250 },
-  },
   argTypes: {
     value: { control: null },
     label: { control: null },
   },
+  parameters: { __sb: { mh: 250 } },
 };
 
 const getItems = getTokenItems(choices.color, 'color');
@@ -33,10 +31,10 @@ Default.args = {
 };
 
 export const Base = ListTemplate.bind({});
-Base.args = { __sb: { fd: 'row' }, items: getItems('base') };
+Base.args = { items: getItems('base') };
 
 export const Brand = ListTemplate.bind({});
-Brand.args = { __sb: { mh: 400 }, items: getItems('brand') };
+Brand.args = { items: getItems('brand') };
 
 export const Decisions = ListTemplate.bind({});
 Decisions.args = {
@@ -46,7 +44,6 @@ Decisions.args = {
 
 export const Backgrounds = ListTemplate.bind({});
 Backgrounds.args = {
-  __sb: { mh: 400 },
   items: getBackgroundItems(),
 };
 
