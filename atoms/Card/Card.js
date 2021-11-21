@@ -4,12 +4,19 @@ import { options } from './constants';
 import styles from './Card.module.css';
 import withStyles from '../../hoc/withStyles';
 
-export const Card = ({ getStyles, onClick, children }) => {
+export const Card = ({
+  getStyles,
+  onClick,
+  children,
+  isClickable,
+  isDraggable,
+}) => {
   return (
     <div
       onClick={onClick}
       className={getStyles('card', ['color', 'size'], {
-        'is-clickable': !!onClick,
+        'is-clickable': isClickable,
+        'is-draggable': isDraggable,
       })}
     >
       {children}
@@ -29,6 +36,8 @@ Card.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   getStyles: PropTypes.func.isRequired,
+  isClickable: PropTypes.bool,
+  isDraggable: PropTypes.bool,
 };
 
 export default withStyles(styles)(Card);

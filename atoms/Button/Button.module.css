@@ -10,7 +10,7 @@
   border-radius: var(--button-border-radius-base);
   box-shadow: var(--box-shadow-sm);
   cursor: pointer;
-  transition: filter 0.5s ease, box-shadow 0.2s ease;
+  transition: filter 0.5s ease, box-shadow 0.2s ease-in;
   /* max-width: var(--button-max-width); */
   /* white-space: nowrap; */ /* Bloquear palabras en dos lineas en botones */
 }
@@ -22,6 +22,7 @@
   filter: brightness(1.1);
 }
 .button:active {
+  box-shadow: var(--box-shadow-xs);
   filter: brightness(0.9);
 }
 .type-primary {
@@ -39,7 +40,6 @@
   height: 25px;
   padding: 0;
   border-bottom: 1px solid var(--color-primary);
-  /* --color-transparent: blue; */
   background: var(--color-base-transparent);
   border-radius: var(--border-radius-none);
   box-shadow: var(--shadows-none);

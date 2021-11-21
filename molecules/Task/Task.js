@@ -25,14 +25,27 @@ export const Task = ({
   defaultIsChecked,
   onCheck,
   onDelete,
+  isPending,
 }) => {
   const [isChecked, setIsChecked] = useState(defaultIsChecked);
   return (
     <div className={getStyles('container')}>
-      <Card onClick={handleClick({ isChecked, setIsChecked, onCheck })}>
-        <div className={getStyles('task', ['type'])}>
+      <Card
+        onClick={handleClick({ isChecked, setIsChecked, onCheck, isPending })}
+        isClickable={!isPending}
+        isDraggable={isPending}
+      >
+        <div
+          className={getStyles('task', ['type'], {
+            'is-checked': isChecked,
+          })}
+        >
           <div className={getStyles('content')}>
-            <Check checked={isChecked} />
+            {isPending ? (
+              <Icon name="grip" size="sm" />
+            ) : (
+              <Check checked={isChecked} />
+            )}
             <Spacer.Vertical size="xs" />
             <Paragraph
               color={isChecked ? 'muted' : 'base'}
@@ -64,6 +77,7 @@ Task.propTypes = {
   defaultIsChecked: PropTypes.bool,
   onCheck: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired,
+  isPending: PropTypes.bool,
 };
 
 Task.defaultProps = {

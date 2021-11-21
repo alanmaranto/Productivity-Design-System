@@ -22,11 +22,11 @@ export const AddButton = ({
   icon,
   focusHelpText,
   blurHelpText,
-  defaultEditMode,
+  defaultIsEditable,
   defaultValue,
   getStyles,
 }) => {
-  const [editMode, setEditMode] = useState(defaultEditMode);
+  const [isEditable, setIsEditable] = useState(defaultIsEditable);
   const [inputValue, setInputValue] = useState(defaultValue);
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef(null);
@@ -34,12 +34,12 @@ export const AddButton = ({
   return (
     <div
       className={getStyles('add-button', ['type'], {
-        'is-editable': editMode,
+        'is-editable': isEditable,
         'is-focused': isFocused,
       })}
-      onClick={handleClick({ setEditMode, inputRef })}
+      onClick={handleClick({ setIsEditable, inputRef })}
     >
-      {editMode ? (
+      {isEditable ? (
         <div className={getStyles('edit-container')}>
           <input
             ref={inputRef}
@@ -50,14 +50,14 @@ export const AddButton = ({
               inputValue,
               onAdd,
               setInputValue,
-              setEditMode,
+              setIsEditable,
             })}
-            onBlur={handleBlur({ inputValue, setEditMode, setIsFocused })}
+            onBlur={handleBlur({ inputValue, setIsEditable, setIsFocused })}
             onFocus={handleFocus({ setIsFocused })}
-            autoFocus={!defaultEditMode}
+            autoFocus={!defaultIsEditable}
           />
           {shouldShowHelpText({
-            editMode,
+            isEditable,
             inputValue,
             focusHelpText,
             blurHelpText,
@@ -96,7 +96,7 @@ AddButton.propTypes = {
   onAdd: PropTypes.func.isRequired,
   focusHelpText: PropTypes.string,
   blurHelpText: PropTypes.string,
-  defaultEditMode: PropTypes.bool,
+  defaultIsEditable: PropTypes.bool,
   defaultValue: PropTypes.string,
   getStyles: PropTypes.func.isRequired,
 };
@@ -106,7 +106,7 @@ AddButton.defaultProps = {
   icon: 'plusCircle',
   onAdd: () => {},
   getStyles: () => {},
-  defaultEditMode: false,
+  defaultIsEditable: false,
   defaultValue: '',
 };
 

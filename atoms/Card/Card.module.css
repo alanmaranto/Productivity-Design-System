@@ -8,6 +8,7 @@
   border-radius: var(--border-radius-sm);
   box-shadow: var(--box-shadow-sm);
   color: var(--color-font-base);
+  transition: box-shadow 0.2s ease-in;
 }
 
 .size-sm {
@@ -37,4 +38,14 @@
 
 .is-clickable {
   cursor: pointer;
+}
+
+.is-draggable {
+  cursor: grab;
+  user-select: none;
+}
+
+.card.is-clickable:active,
+.card.is-draggable:active {
+  box-shadow: var(--box-shadow-xs);
 }
