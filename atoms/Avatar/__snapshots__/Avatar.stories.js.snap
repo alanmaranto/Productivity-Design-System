@@ -6,7 +6,7 @@ exports[`Storyshots Atoms/Avatar Default 1`] = `
     Object {
       "alignItems": "flex-start",
       "display": "flex",
-      "flexDirection": "row ",
+      "flexDirection": "column",
       "flexWrap": "wrap",
       "gap": "10px 30px",
       "height": "100%",
@@ -41,7 +41,7 @@ exports[`Storyshots Atoms/Avatar Sizes 1`] = `
     Object {
       "alignItems": "flex-start",
       "display": "flex",
-      "flexDirection": "row ",
+      "flexDirection": "column",
       "flexWrap": "wrap",
       "gap": "10px 30px",
       "height": "100%",

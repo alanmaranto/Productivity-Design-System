@@ -16,17 +16,17 @@ exports[`Storyshots Atoms/Heading Colors 1`] = `
   }
 >
   <header
-    className="color-base heading"
+    className="color-base size-md weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
   <header
-    className="color-primary heading"
+    className="color-primary size-md weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
   <header
-    className="color-inverted heading"
+    className="color-inverted size-md weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
@@ -49,7 +49,7 @@ exports[`Storyshots Atoms/Heading Default 1`] = `
   }
 >
   <header
-    className="heading"
+    className="color-base size-md weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
@@ -72,32 +72,32 @@ exports[`Storyshots Atoms/Heading Sizes 1`] = `
   }
 >
   <header
-    className="size-xs heading"
+    className="color-base size-xs weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
   <header
-    className="size-sm heading"
+    className="color-base size-sm weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
   <header
-    className="size-md heading"
+    className="color-base size-md weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
   <header
-    className="size-lg heading"
+    className="color-base size-lg weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
   <header
-    className="size-xl heading"
+    className="color-base size-xl weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
   <header
-    className="size-2xl heading"
+    className="color-base size-2xl weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
@@ -120,12 +120,12 @@ exports[`Storyshots Atoms/Heading Weights 1`] = `
   }
 >
   <header
-    className="weight-normal heading"
+    className="color-base size-md weight-normal heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>
   <header
-    className="weight-bold heading"
+    className="color-base size-md weight-bold heading"
   >
     Consent doubt TuckBorleje challeng destroying
   </header>

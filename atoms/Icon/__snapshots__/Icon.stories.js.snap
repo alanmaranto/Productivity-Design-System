@@ -6,7 +6,7 @@ exports[`Storyshots Atoms/Icon Backgrounds 1`] = `
     Object {
       "alignItems": "flex-start",
       "display": "flex",
-      "flexDirection": "row",
+      "flexDirection": "column",
       "flexWrap": "wrap",
       "gap": "10px 30px",
       "height": "100%",
@@ -16,7 +16,7 @@ exports[`Storyshots Atoms/Icon Backgrounds 1`] = `
   }
 >
   <div
-    className="icon background-transparent"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -44,7 +44,7 @@ exports[`Storyshots Atoms/Icon Backgrounds 1`] = `
     </svg>
   </div>
   <div
-    className="icon background-base"
+    className="icon color-base size-md background-base"
     onClick={null}
     style={
       Object {
@@ -72,7 +72,7 @@ exports[`Storyshots Atoms/Icon Backgrounds 1`] = `
     </svg>
   </div>
   <div
-    className="icon background-highlight"
+    className="icon color-base size-md background-highlight"
     onClick={null}
     style={
       Object {
@@ -100,7 +100,7 @@ exports[`Storyshots Atoms/Icon Backgrounds 1`] = `
     </svg>
   </div>
   <div
-    className="icon background-inverted"
+    className="icon color-base size-md background-inverted"
     onClick={null}
     style={
       Object {
@@ -128,7 +128,7 @@ exports[`Storyshots Atoms/Icon Backgrounds 1`] = `
     </svg>
   </div>
   <div
-    className="icon background-muted"
+    className="icon color-base size-md background-muted"
     onClick={null}
     style={
       Object {
@@ -156,7 +156,7 @@ exports[`Storyshots Atoms/Icon Backgrounds 1`] = `
     </svg>
   </div>
   <div
-    className="icon background-spotlight"
+    className="icon color-base size-md background-spotlight"
     onClick={null}
     style={
       Object {
@@ -192,7 +192,7 @@ exports[`Storyshots Atoms/Icon Clickable 1`] = `
     Object {
       "alignItems": "flex-start",
       "display": "flex",
-      "flexDirection": "row",
+      "flexDirection": "column",
       "flexWrap": "wrap",
       "gap": "10px 30px",
       "height": "100%",
@@ -202,7 +202,7 @@ exports[`Storyshots Atoms/Icon Clickable 1`] = `
   }
 >
   <div
-    className="icon is-clickable"
+    className="icon color-base size-md background-transparent is-clickable"
     onClick={null}
     style={
       Object {
@@ -238,7 +238,7 @@ exports[`Storyshots Atoms/Icon Colors 1`] = `
     Object {
       "alignItems": "flex-start",
       "display": "flex",
-      "flexDirection": "row",
+      "flexDirection": "column",
       "flexWrap": "wrap",
       "gap": "10px 30px",
       "height": "100%",
@@ -248,7 +248,7 @@ exports[`Storyshots Atoms/Icon Colors 1`] = `
   }
 >
   <div
-    className="icon color-base"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -276,7 +276,7 @@ exports[`Storyshots Atoms/Icon Colors 1`] = `
     </svg>
   </div>
   <div
-    className="icon color-highlight"
+    className="icon color-highlight size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -304,7 +304,7 @@ exports[`Storyshots Atoms/Icon Colors 1`] = `
     </svg>
   </div>
   <div
-    className="icon color-muted"
+    className="icon color-muted size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -332,7 +332,7 @@ exports[`Storyshots Atoms/Icon Colors 1`] = `
     </svg>
   </div>
   <div
-    className="icon color-primary"
+    className="icon color-primary size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -360,7 +360,7 @@ exports[`Storyshots Atoms/Icon Colors 1`] = `
     </svg>
   </div>
   <div
-    className="icon color-inverted"
+    className="icon color-inverted size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -396,7 +396,7 @@ exports[`Storyshots Atoms/Icon Default 1`] = `
     Object {
       "alignItems": "flex-start",
       "display": "flex",
-      "flexDirection": "row",
+      "flexDirection": "column",
       "flexWrap": "wrap",
       "gap": "10px 30px",
       "height": "100%",
@@ -406,7 +406,7 @@ exports[`Storyshots Atoms/Icon Default 1`] = `
   }
 >
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -442,7 +442,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     Object {
       "alignItems": "flex-start",
       "display": "flex",
-      "flexDirection": "row",
+      "flexDirection": "column",
       "flexWrap": "wrap",
       "gap": "10px 30px",
       "height": "100%",
@@ -452,7 +452,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
   }
 >
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -485,7 +485,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -513,7 +513,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -536,7 +536,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -559,7 +559,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -582,7 +582,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -615,7 +615,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -643,7 +643,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -676,7 +676,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -724,7 +724,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -752,7 +752,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -780,7 +780,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -803,7 +803,7 @@ exports[`Storyshots Atoms/Icon Names 1`] = `
     </svg>
   </div>
   <div
-    className="icon"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -832,7 +832,7 @@ exports[`Storyshots Atoms/Icon Sizes 1`] = `
     Object {
       "alignItems": "flex-start",
       "display": "flex",
-      "flexDirection": "row",
+      "flexDirection": "column",
       "flexWrap": "wrap",
       "gap": "10px 30px",
       "height": "100%",
@@ -842,7 +842,7 @@ exports[`Storyshots Atoms/Icon Sizes 1`] = `
   }
 >
   <div
-    className="icon size-sm"
+    className="icon color-base size-sm background-transparent"
     onClick={null}
     style={
       Object {
@@ -870,7 +870,7 @@ exports[`Storyshots Atoms/Icon Sizes 1`] = `
     </svg>
   </div>
   <div
-    className="icon size-md"
+    className="icon color-base size-md background-transparent"
     onClick={null}
     style={
       Object {
@@ -898,7 +898,7 @@ exports[`Storyshots Atoms/Icon Sizes 1`] = `
     </svg>
   </div>
   <div
-    className="icon size-lg"
+    className="icon color-base size-lg background-transparent"
     onClick={null}
     style={
       Object {
@@ -926,7 +926,7 @@ exports[`Storyshots Atoms/Icon Sizes 1`] = `
     </svg>
   </div>
   <div
-    className="icon size-xl"
+    className="icon color-base size-xl background-transparent"
     onClick={null}
     style={
       Object {

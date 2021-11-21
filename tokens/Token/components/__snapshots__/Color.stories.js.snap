@@ -11,7 +11,7 @@ exports[`Storyshots Tokens/Color Backgrounds 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 400,
+      "maxHeight": "auto",
     }
   }
 >
@@ -76,7 +76,7 @@ exports[`Storyshots Tokens/Color Base 1`] = `
     Object {
       "alignItems": "flex-start",
       "display": "flex",
-      "flexDirection": "row",
+      "flexDirection": "column",
       "flexWrap": "wrap",
       "gap": "10px 30px",
       "height": "100%",
@@ -177,7 +177,7 @@ exports[`Storyshots Tokens/Color Blue 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -429,7 +429,7 @@ exports[`Storyshots Tokens/Color Brand 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 400,
+      "maxHeight": "auto",
     }
   }
 >
@@ -1037,7 +1037,7 @@ exports[`Storyshots Tokens/Color Default 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -1081,7 +1081,7 @@ exports[`Storyshots Tokens/Color Gray 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -1333,7 +1333,7 @@ exports[`Storyshots Tokens/Color Green 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -1585,7 +1585,7 @@ exports[`Storyshots Tokens/Color Indigo 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -1837,7 +1837,7 @@ exports[`Storyshots Tokens/Color Orange 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -2089,7 +2089,7 @@ exports[`Storyshots Tokens/Color Pink 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -2341,7 +2341,7 @@ exports[`Storyshots Tokens/Color Purple 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -2593,7 +2593,7 @@ exports[`Storyshots Tokens/Color Red 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -2845,7 +2845,7 @@ exports[`Storyshots Tokens/Color Teal 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
@@ -3097,7 +3097,7 @@ exports[`Storyshots Tokens/Color Yellow 1`] = `
       "gap": "10px 30px",
       "height": "100%",
       "justifyContent": "flex-start",
-      "maxHeight": 250,
+      "maxHeight": "auto",
     }
   }
 >
