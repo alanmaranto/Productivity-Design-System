@@ -1,7 +1,7 @@
 export const handleClick =
-  ({ setEditMode, inputRef }) =>
+  ({ setIsEditable, inputRef }) =>
   () => {
-    setEditMode(true);
+    setIsEditable(true);
     inputRef?.current?.focus();
   };
 
@@ -12,24 +12,24 @@ export const handleOnChange =
   };
 
 export const handleOnKeyDown =
-  ({ onAdd, inputValue, setInputValue, setEditMode }) =>
+  ({ onAdd, inputValue, setInputValue, setIsEditable }) =>
   (event) => {
     if (event.key === 'Enter') {
       onAdd(inputValue);
       setInputValue('');
-      setEditMode(false);
+      setIsEditable(false);
     }
     if (event.key === 'Escape') {
       setInputValue('');
-      setEditMode(false);
+      setIsEditable(false);
     }
   };
 
 export const handleBlur =
-  ({ inputValue, setEditMode, setIsFocused }) =>
+  ({ inputValue, setIsEditable, setIsFocused }) =>
   () => {
     setIsFocused(false);
-    !inputValue && setEditMode(false);
+    !inputValue && setIsEditable(false);
   };
 
 export const handleFocus =

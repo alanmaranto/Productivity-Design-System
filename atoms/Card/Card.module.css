@@ -12,15 +12,15 @@
 }
 
 .size-sm {
-  height: 45px;
+  min-height: 45px;
 }
 
 .size-md {
-  height: 80px;
+  min-height: 80px;
 }
 
 .size-lg {
-  height: 115px;
+  min-height: 115px;
 }
 
 .color-primary {

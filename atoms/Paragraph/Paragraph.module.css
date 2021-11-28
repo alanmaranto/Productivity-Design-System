@@ -35,5 +35,5 @@
 }
 
 .is-striked {
-  text-decoration: none;
+  text-decoration: line-through;
 }
