@@ -597,7 +597,7 @@ exports[`Storyshots Molecules/Task Types 1`] = `
       onClick={[Function]}
     >
       <div
-        className="task type-standBy"
+        className="task type-standby"
       >
         <div
           className="content"
